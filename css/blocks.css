@@ -1,3 +1,18 @@
+[data-accordion~="basic"][data-accordion~="hide"],    /* target is container */
+[data-accordion~="basic"] [data-accordion~="hide"]    /* target is contained */
+{
+    display: none;
+}
+[data-tabs~="basic"][data-tabs~="hide"],    /* target is container */
+[data-tabs~="basic"] [data-tabs~="hide"]    /* target is contained */
+{
+    display: none;
+}
+[data-toggle~="basic"][data-toggle~="hide"],    /* target is container */
+[data-toggle~="basic"] [data-toggle~="hide"]    /* target is contained */
+{
+    display: none;
+}
 /**************************************************************************** Branding Colors */
 /****************************************************************************  Breakpoints  */
 /* 360px is iPhone vertical */
@@ -99,9 +114,9 @@ body .message { border-radius: 0px; }
 /* line 46, ../../../../extension/blocks/message/_header.scss */
 .message.neutral.dark header, .message.emphasize.neutral header { background-color: #242424; border-color: #595959; }
 /* line 53, ../../../../extension/blocks/message/_header.scss */
-.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse).light header, .message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse) header { background-color: #e3e3e3; border-color: #b3b3b3; }
+.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required).light header, .message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required) header { background-color: #e3e3e3; border-color: #b3b3b3; }
 /* line 57, ../../../../extension/blocks/message/_header.scss */
-.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse).dark header { background-color: #242424; border-color: #595959; }
+.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required).dark header { background-color: #242424; border-color: #595959; }
 /* line 64, ../../../../extension/blocks/message/_header.scss */
 .message.info.light header, .message.info header { background-color: #b3eaff; border-color: #66d4ff; }
 /* line 68, ../../../../extension/blocks/message/_header.scss */
@@ -131,12 +146,16 @@ body .message { border-radius: 0px; }
 /* line 134, ../../../../extension/blocks/message/_header.scss */
 .message.highlight.dark header, .message.emphasize.highlight header { background-color: #47002e; border-color: #b30073; }
 /* line 141, ../../../../extension/blocks/message/_header.scss */
-.message.inverse.light header, .message.inverse header { background-color: gray; border-color: #333333; }
+.message.required.light header, .message.required header { background-color: #eec3c3; border-color: #dd8888; }
 /* line 145, ../../../../extension/blocks/message/_header.scss */
-.message.inverse.dark header, .message.emphasize.inverse header { background-color: #242424; border-color: #595959; }
-/* line 151, ../../../../extension/blocks/message/_header.scss */
-.message header { margin: -5px -10px 5px -10px; padding: 5px 10px; border-bottom: 1px solid; }
+.message.required.dark header, .message.emphasize.required header { background-color: #381010; border-color: #8b2727; }
+/* line 152, ../../../../extension/blocks/message/_header.scss */
+.message.inverse.light header, .message.inverse header { background-color: gray; border-color: #333333; }
 /* line 156, ../../../../extension/blocks/message/_header.scss */
+.message.inverse.dark header, .message.emphasize.inverse header { background-color: #242424; border-color: #595959; }
+/* line 162, ../../../../extension/blocks/message/_header.scss */
+.message header { margin: -5px -10px 5px -10px; padding: 5px 10px; border-bottom: 1px solid; }
+/* line 167, ../../../../extension/blocks/message/_header.scss */
 .message header h1, .message header h2, .message header h3, .message header h4, .message header h5, .message header h6 { font-size: 1.1em; margin-bottom: 0; }
 
 /* line 1, ../../../../extension/blocks/nav/_mega.scss */
