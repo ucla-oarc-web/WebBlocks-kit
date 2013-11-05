@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="..">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Messages</h1>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            
+            var createLiveSection = function($factory){
+                var $code = $(document.createElement('pre')).addClass('prettyprint'),
+                    $form = $(document.createElement('form')).addClass('form').addClass('horizontal'),
+                    $figure = $(document.createElement('figure'));
+            
+                $figure.html($factory);
+                $code.html($figure.html().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+                if(typeof prettyPrint !== 'undefined')
+                    prettyPrint();
+            
+                return $(document.createElement('section'))
+                    .attr('aria-live','polite')
+                    .append($figure)
+                    .append($code)
+                    .append($form);
+            };
+            
+            var updateLiveSection = function($live, $factory){
+                var $figure = $live.children('figure');
+                $figure.html($factory);
+                $live.children('pre').html($figure.html().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'))
+                if(typeof prettyPrint !== 'undefined')
+                    prettyPrint();
+            }
+            
+            var labelInput = function($control){
+                var $label = $control.children('label'),
+                    id = 'auto-'+Math.random().toString(36).substring(2);
+                if($label && !$label.attr('id')){
+                    $label.attr('for', id);
+                }
+                $control.children('select,input,textarea').first().attr('id', id);
+            }
+            
+            var createLiveMessageSection = function(options){ with(WebBlocks.Blocks){
+                    
+                var $message = new Message(options),
+                    $live = createLiveSection($message),
+                    $controlTemplate = $(document.createElement('div'))
+                                            .addClass('control')
+                                            .append($(document.createElement('label'))),
+                    $form = $live.find('form'),
+                    $control, $input;
+                                    
+                $control = $controlTemplate.clone();
+                $input = $(document.createElement('input')).attr('name','header').attr('type', 'text').addClass('large');
+                $control.find('label').html('Header');
+                $control.append($input.val($message.getHeader().html()));
+                labelInput($control);
+                $form.append($control);
+                                    
+                $control = $controlTemplate.clone();
+                $input = $(document.createElement('textarea')).attr('name','content').addClass('full');
+                $control.find('label').html('Content');
+                $control.append($input.val($message.getContent().html()));
+                labelInput($control);
+                $form.append($control);
+                
+                $control = $controlTemplate.clone();
+                $input = $(document.createElement('select')).attr('name','color').addClass('large').append('<option></option>');
+                $control.find('label').html('Content');
+                $.each(Color.COLORS, function(){ $input.append('<option>'+this+'</option>') })
+                $control.append($input);
+                labelInput($control);
+                $form.append($control);
+                
+                $form.find('input,textarea,select').change(function(){
+                    var options = {}
+                    $form.find('input,textarea,select[name]').each(function(){
+                        options[$(this).attr('name')] = $(this).val();
+                    })
+                    updateLiveSection($live, new Message(options))
+                })
+                
+                return $live;
+            }};
+            
+            $('main').append(createLiveMessageSection({
+                'header': 'Message Heading',
+                'content': 'This is the content of the message'
+            }));
+            
+        </script>
+        
+    </body>
+</html>

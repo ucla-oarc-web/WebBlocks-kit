@@ -1,0 +1,19 @@
+.prettyprint:first-child {
+    margin-top: 0;
+}
+
+.prettyprint:last-child {
+    margin-bottom: 0;
+}
+
+.prettyprint {
+    font-size: 0.83em;
+}
+
+main section {
+    margin-bottom: 1em;
+}
+
+main section section:last-child {
+    margin-bottom: 0;
+}
