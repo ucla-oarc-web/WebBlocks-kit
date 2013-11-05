@@ -2118,6 +2118,75 @@ $(function () {
     });
 
 });
+(function ($, window, document, undefined) {
+
+    var methods = {};
+
+    $.fn.addBlocksMethod = function(name, method){
+        methods[name] = method;
+    }
+
+    $.fn.blocks = function() {
+        var that = $(this)
+        $.each(methods, function(name, method){
+            that[name] = method;
+        })
+        return that;
+    }
+})(jQuery, window, document);
+$(document).addBlocksMethod('processFormRequired', function(){
+                
+    var markControls = function(){
+
+            var $control = $(this),
+                $inputs = $control.find('input,textarea,select');
+
+                if($inputs.filter(function(){ return !$(this).val().length }).length > 0){
+                    $control.addClass('required');
+                }else{
+                    $control.removeClass('required');
+                }
+
+        },
+        addAriaAlert = function(){
+            $(this).attr('role', $(this).hasClass('required') ? 'alert' : null);
+        }
+
+    $(this).find('form.form .control[data-required="true"]').each(function(){
+
+        var $control = $(this).closest('.control'),
+            $inputs = $control.find('input,textarea,select');
+
+        $inputs.change(function(){
+            markControls.call($control);
+            addAriaAlert.call($control);
+        })
+
+        markControls.call($control);
+        $control.find('.required-pass, .required-fail').attr('data-required', 'ready')
+
+    })
+
+    $(this).find('form.form').submit(function(e){
+
+        var $form = $(this),
+            $controls = $form.find('.control').filter(function(){ return $(this).hasClass('required') }),
+            $formRequiredFail = $form.find('.form-required-fail');
+
+        if(!$controls.length)
+            return;
+
+        e.preventDefault();
+
+        $controls.each(function(){
+            addAriaAlert.call(this);
+        })
+
+        $form.addClass('form-required-failure');
+        $formRequiredFail.attr('role', 'alert');
+    })
+
+});
 /**
  * NAVIGATION SUB-MENU TOGGLE
  * 
@@ -2207,6 +2276,23 @@ $(document).ready(function(){
         });
     });
     
+});
+$(document).ready(function(){
+
+    /**
+     * This makes a webpage accessible to screen readers if one follows 
+     * proper HTML and WebBlocks conventions.
+     */
+
+    $('body').ariaWebBlocksMapper();
+
+    /**
+     * This takes all forms in the DOM and processes data-required="true" on the
+     * controls.
+     */
+
+    $('body').blocks().processFormRequired();
+
 });
 /**
  * jQuery.ariaMapper
