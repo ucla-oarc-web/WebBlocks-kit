@@ -14,10 +14,6 @@
         <![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <style>
-            #example-buttons > li { margin-bottom: 12px; }
-        </style>
-        
     </head>
     
     <body class="site">
@@ -36,26 +32,15 @@
         <div class="main container">
             <main class="site">
                 
-                <h1>Elements: Buttons</h1>
+                <h1>Elements: Badges</h1>
                 
                 <div class="row">
                     
                     <div class="panel-6">
                 
-                        <ul class="list unstyled" id="example-buttons">
-                            <li>
-                                <a href="#" class="button">Button Text</a>
-                            </li>
-                            <li>
-                                <button class="button">Button Text</button>
-                            </li>
-                            <li>
-                                <input type="submit" class="button" value="Button Text">
-                            </li>
-                            <li>
-                                <input type="reset" class="button" value="Button Text">
-                            </li>
-                        </ul>
+                        <p class="list unstyled" id="example-badge">
+                            <span class="badge">Badge Text</span>
+                        </p>
                         
                     </div>
                     
@@ -65,7 +50,7 @@
 
                             <div class="control">
                                 <label>Text</label>
-                                <input type="text" id="i-text" value="Button Text">
+                                <input type="text" id="i-text" value="Badge Text">
                             </div>
 
                             <div class="control">
@@ -87,7 +72,7 @@
         <script type="text/javascript">
             
             $(document).ready(function(){
-                $('#example-buttons .button').each(function(){
+                $('#example-badge .badge').each(function(){
                     makeFormattedSection(this);
                 })
                 
@@ -96,18 +81,17 @@
                 $.each(WebBlocks.Blocks.Color.COLORS, function(){ $color.append('<option>'+this+'</option>') });
                 
                 $text.change(function(){
-                    $('main.site').find('a.button, button.button').html($(this).val());
-                    $('main.site').find('input.button').val($(this).val());
-                    $('main.site').find('.button').each(function(){
+                    $('main.site').find('.badge').html($(this).val());
+                    $('main.site').find('.badge').each(function(){
                         updateFormattedSectionCode($(this).closest('section'))
                     });
                 })
                 
                 $color.change(function(){
-                    var $eles = $('main.site').find('a.button, button.button, input.button')
+                    var $eles = $('main.site').find('.badge')
                     $.each(WebBlocks.Blocks.Color.COLORS, function(){ $eles.removeClass(this.toString()) });
                     $eles.addClass($(this).val())
-                    $('main.site').find('.button').each(function(){
+                    $('main.site').find('.badge').each(function(){
                         updateFormattedSectionCode($(this).closest('section'))
                     });
                 })

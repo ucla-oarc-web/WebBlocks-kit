@@ -8,7 +8,8 @@ $(document).ready(function(){
         { 'title': 'Elements', 'items': [
                 { 'title': 'Headers', 'url': 'element_headers.html' },
                 { 'title': 'Messages', 'url': 'element_messages.html' },
-                { 'title': 'Buttons', 'url': 'element_buttons.html' }
+                { 'title': 'Buttons', 'url': 'element_buttons.html' },
+                { 'title': 'Badges', 'url': 'element_badges.html' }
         ]},
         { 'title': 'Patterns', 'items': [
                 { 'title': 'Quicklinks', 'url': 'pattern_quicklinks.html' }
