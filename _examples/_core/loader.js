@@ -6,11 +6,12 @@ $(document).ready(function(){
     
     var megaMenuItems = [
         { 'title': 'Elements', 'items': [
-                { 'title': 'Headers', 'url': 'elements_headers.html' },
-                { 'title': 'Messages', 'url': 'elements_messages.html' }
+                { 'title': 'Headers', 'url': 'element_headers.html' },
+                { 'title': 'Messages', 'url': 'element_messages.html' },
+                { 'title': 'Buttons', 'url': 'element_buttons.html' }
         ]},
         { 'title': 'Patterns', 'items': [
-                { 'title': 'Quicklinks', 'url': 'patterns_quicklinks.html' }
+                { 'title': 'Quicklinks', 'url': 'pattern_quicklinks.html' }
         ]}
     ];
     

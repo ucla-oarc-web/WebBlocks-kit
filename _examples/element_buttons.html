@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            #example-buttons > li { margin-bottom: 12px; }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Elements: Buttons</h1>
+                
+                <div class="row">
+                    
+                    <div class="panel-6">
+                
+                        <ul class="list unstyled" id="example-buttons">
+                            <li>
+                                <a href="#" class="button">Button Text</a>
+                            </li>
+                            <li>
+                                <button class="button">Button Text</button>
+                            </li>
+                            <li>
+                                <input type="submit" class="button" value="Button Text">
+                            </li>
+                            <li>
+                                <input type="reset" class="button" value="Button Text">
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <div class="panel-6">
+                        
+                        <form class="form">
+
+                            <div class="control">
+                                <label>Text</label>
+                                <input type="text" id="i-text" value="Button Text">
+                            </div>
+
+                            <div class="control">
+                                <label>Color</label>
+                                <select id="i-color">
+                                    <option></option>
+                                </select>
+                            </div>
+
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $('#example-buttons .button').each(function(){
+                    makeFormattedSection(this);
+                })
+                
+                var $text = $('#i-text'), $color = $('#i-color');
+                
+                $.each(WebBlocks.Blocks.Color.COLORS, function(){ $color.append('<option>'+this+'</option>') });
+                
+                $text.change(function(){
+                    $('main.site').find('a.button, button.button').html($(this).val());
+                    $('main.site').find('input.button').val($(this).val());
+                })
+                
+                $color.change(function(){
+                    var $eles = $('main.site').find('a.button, button.button, input.button')
+                    $.each(WebBlocks.Blocks.Color.COLORS, function(){ $eles.removeClass(this.toString()) });
+                    $eles.addClass($(this).val())
+                })
+            })
+            
+        </script>
+        
+    </body>
+</html>
