@@ -5,13 +5,13 @@ $(document).ready(function(){
      */
     
     var megaMenuItems = [
-        { 'title': 'Basic', 'items': [
-                { 'title': 'Headers', 'url': 'basic_headers.html' }
+        { 'title': 'Elements', 'items': [
+                { 'title': 'Headers', 'url': 'elements_headers.html' },
+                { 'title': 'Messages', 'url': 'elements_messages.html' }
         ]},
         { 'title': 'Patterns', 'items': [
-                { 'title': 'Quick Links', 'url': 'patterns_quicklinks.html' }
-        ]},
-        { 'title': 'Messages', 'url': 'messages.html' }
+                { 'title': 'Quicklinks', 'url': 'patterns_quicklinks.html' }
+        ]}
     ];
     
     /**
