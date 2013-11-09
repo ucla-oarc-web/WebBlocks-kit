@@ -32,21 +32,48 @@
         <div class="main container">
             <main class="site">
                 
-                <div class="message warning">
-                    <header>
-                        <h1>Pardon Our Dust</h1>
-                    </header>
-                    <p>The WebBlocks Kit Examples tool is currently a work in progress. While the tools available herein are functional, they do not represent the totality of what this tool will eventually provide.</p>
-                </div>
+                <h1>Basic: Headers</h1>
                 
-                <h2>Examples</h2>
+                <p>This page showcases how headers are presented.</p>
                 
-                <ul>
-                    <li><a href="messages.html">Messages</a></li>
+                <ul class="unstyled list" id="header-examples">
+                    
+                    <li>
+                        <h1>Header</h1>
+                    </li>
+
+                    <li>
+                        <h2>Header</h2>
+                    </li>
+
+                    <li>
+                        <h3>Header</h3>
+                    </li>
+
+                    <li>
+                        <h4>Header</h4>
+                    </li>
+
+                    <li>
+                        <h5>Header</h5>
+                    </li>
+
+                    <li>
+                        <h6>Header</h6>
+                    </li>
+                    
                 </ul>
                 
             </main>
         </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#header-examples').find('h1,h2,h3,h4,h5,h6').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
         
     </body>
 </html>

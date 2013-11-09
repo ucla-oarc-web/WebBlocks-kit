@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Pattern: Quicklinks</h1>
+                
+                <p>The <dfn>Quicklinks Patterns</dfn> supports between one and six quicklinks:</p>
+                    
+<section class="quicklinks">
+    <figure>
+        <img src="path/to/img" alt="Text relaying what the image shows">
+        <figcaption>
+            <a href="#">The image caption</a>
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="path/to/img" alt="Text relaying what the image shows">
+        <figcaption>
+            <a href="#">The image caption</a>
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="path/to/img" alt="Text relaying what the image shows">
+        <figcaption>
+            <a href="#">The image caption</a>
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="path/to/img" alt="Text relaying what the image shows">
+        <figcaption>
+            <a href="#">The image caption</a>
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="path/to/img" alt="Text relaying what the image shows">
+        <figcaption>
+            <a href="#">The image caption</a>
+        </figcaption>
+    </figure>
+</section>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.quicklinks').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

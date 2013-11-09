@@ -2193,9 +2193,12 @@ $(document).addBlocksMethod('processFormRequired', function(){
  * When a link in the navigation is clicked, it should cause the associated
  * sub-menu to be toggled.
  */
-$(document).ready(function(){
+
+if(typeof WebBlocks == 'undefined') WebBlocks = {}
+
+WebBlocks.navMegaMenu = function(){
     
-    $('nav.mega > ul > li :not(ul) a').click(function(e){
+    $(this).find('nav.mega > ul > li :not(ul) a').click(function(e){
         var liEle = $(this).closest('li'),
             dropdownEle = liEle.children('ul'),
             show = !liEle.hasClass('active');
@@ -2276,6 +2279,10 @@ $(document).ready(function(){
         });
     });
     
+}
+
+$(document).ready(function(){
+    WebBlocks.navMegaMenu.call(this);
 });
 $(document).ready(function(){
 
@@ -2749,11 +2756,3 @@ WebBlocks.Blocks.addBlock({
     }
     
 });
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-;
