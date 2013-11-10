@@ -179,32 +179,36 @@ nav.mega > ul > li > ul > li { padding-bottom: 12px; /* same spacing as below an
 @media (min-width: 641px) { /* line 70, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul { height: 1.4em; float: right; }
   /* line 75, ../../../../extension/blocks/nav/_mega.scss */
-  nav.mega > ul > li { float: left; }
-  /* line 80, ../../../../extension/blocks/nav/_mega.scss */
-  nav.mega > ul > li.active > h1, nav.mega > ul > li.active > a { background-color: white; }
-  /* line 83, ../../../../extension/blocks/nav/_mega.scss */
-  nav.mega > ul > li.active > h1 > a, nav.mega > ul > li.active > a { color: #073198 !important; }
+  nav.mega > ul > li { float: left; /* left border -- if not first child and neither preceding nor current are active */ }
+  /* line 79, ../../../../extension/blocks/nav/_mega.scss */
+  nav.mega > ul > li > h1, nav.mega > ul > li > a { padding-right: 15px; cursor: pointer; }
   /* line 85, ../../../../extension/blocks/nav/_mega.scss */
-  nav.mega > ul > li.active > h1 > a:hover, nav.mega > ul > li.active > a:hover { color: #44557d !important; }
+  nav.mega > ul > li.active > h1, nav.mega > ul > li.active > a { background-color: white; padding: 0 15px 0 15px; }
+  /* line 89, ../../../../extension/blocks/nav/_mega.scss */
+  nav.mega > ul > li.active > h1 > a, nav.mega > ul > li.active > a { color: #073198 !important; }
   /* line 91, ../../../../extension/blocks/nav/_mega.scss */
-  nav.mega > ul > li:not(:first-child) { padding-left: 20px; }
-  /* line 95, ../../../../extension/blocks/nav/_mega.scss */
-  nav.mega > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -10px; }
-  /* line 103, ../../../../extension/blocks/nav/_mega.scss */
+  nav.mega > ul > li.active > h1 > a:hover, nav.mega > ul > li.active > a:hover { color: #44557d !important; }
+  /* line 101, ../../../../extension/blocks/nav/_mega.scss */
+  nav.mega > ul > li + li.active > :first-child:before { display: none; }
+  /* line 106, ../../../../extension/blocks/nav/_mega.scss */
+  nav.mega > ul > li + li > :first-child:before { width: 19px; content: "|"; display: block; float: left; margin-left: -4px; opacity: 0; }
+  /* line 118, ../../../../extension/blocks/nav/_mega.scss */
+  nav.mega > ul > li:not(.active) + li:not(.active) > :first-child:before { opacity: 1; }
+  /* line 124, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul { position: absolute; left: 0; right: 0; z-index: 1000; background-color: white; color: #323232; }
-  /* line 112, ../../../../extension/blocks/nav/_mega.scss */
+  /* line 133, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul a { color: #073198 !important; }
-  /* line 114, ../../../../extension/blocks/nav/_mega.scss */
+  /* line 135, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul a:hover { color: #44557d !important; }
-  /* line 119, ../../../../extension/blocks/nav/_mega.scss */
+  /* line 140, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul > li { padding-bottom: 12px; /* same spacing as below an h2 */ } }
-@media (min-width: 641px) and (max-width: 960px) { /* line 129, ../../../../extension/blocks/nav/_mega.scss */
+@media (min-width: 641px) and (max-width: 960px) { /* line 150, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul > li { float: left; width: 50%; }
-  /* line 132, ../../../../extension/blocks/nav/_mega.scss */
+  /* line 153, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul > li:nth-child(2n+1) { clear: both; } }
-@media (min-width: 961px) { /* line 139, ../../../../extension/blocks/nav/_mega.scss */
+@media (min-width: 961px) { /* line 160, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul > li { float: left; width: 25%; }
-  /* line 142, ../../../../extension/blocks/nav/_mega.scss */
+  /* line 163, ../../../../extension/blocks/nav/_mega.scss */
   nav.mega > ul > li > ul > li:nth-child(4n+1) { clear: both; } }
 /* line 2, ../../../../extension/blocks/nav/_search.scss */
 nav.search form.form { position: relative; width: 224px; height: 2em; }
@@ -2219,7 +2223,7 @@ nav.list.accordion ul ul, nav.list.accordion ul ol, nav.list.accordion ol ul, na
 body.site { background-image: url("../img/site/background.jpg"); }
 
 /* line 1, ../../../../sass/includes/site/_header.scss */
-header.site { padding: 1em 0; min-height: 2em; }
+header.site { padding: 1em 0 1.5em 0; min-height: 2em; }
 /* line 6, ../../../../sass/includes/site/_header.scss */
 header.site .container { position: relative; }
 /* line 10, ../../../../sass/includes/site/_header.scss */
@@ -2256,7 +2260,7 @@ header.site nav.search form.form input[type="submit"] br { display: none; }
   header.site hgroup + nav.search + nav.mega:before { content: ""; height: 0; } }
 
 /* line 1, ../../../../sass/includes/site/_main.scss */
-main.site { padding: 20px; }
+main.site { padding: 20px; margin-top: -1em; }
 
 /* line 1, ../../../../sass/includes/site/main/_basic.scss */
 h1, h2, h3, h4, h5, h6 { color: #4e8db6; }
