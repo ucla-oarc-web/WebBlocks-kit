@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            #example-colors > section {
+                overflow: auto;
+            }
+            #example-colors > section > * {
+                float: left;
+                width: 40%;
+                margin-left: 10px;
+            }
+            #example-colors > section > figure div  {
+                padding: 5px 10px;
+            }
+            #example-colors pre {
+                margin-top: 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Colors</h1>
+                
+                <form class="form">
+                    <div class="control">
+                        <label>Select Color</label>
+                        <select id="i-color">
+                            
+                        </select>
+                    </div>
+                </form>
+                
+                <div id="example-colors">
+                    <span class="text-primary">Primary Text</span>
+                    <div class="primary">Primary</div>
+                    <div class="primary gradient">Primary Gradient</div>
+                    <div class="primary light">Primary Light</div>
+                    <div class="primary light gradient">Primary Light Gradient</div>
+                    <div class="primary dark">Primary Dark</div>
+                    <div class="primary dark gradient">Primary Dark Gradient</div>
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $('#example-colors > div, #example-colors > span').each(function(){
+                    makeFormattedSection(this);
+                })
+                
+                $.each(WebBlocks.Blocks.Color.COLORS, function(){ $('#i-color').append('<option>'+this+'</option>') });
+                $('#i-color').change(function(){
+                    
+                    var cls = $(this).val();
+                    
+                    var $div = $('#example-colors figure div')
+                    $.each(WebBlocks.Blocks.Color.COLORS, function(){ $div.removeClass(this.toString()) });
+                    $div.addClass(cls)
+                    $div.each(function(){
+                        var divtext = $(this).html().split(' ');
+                        divtext[0] = cls.charAt(0).toUpperCase() + cls.slice(1);
+                        $(this).html(divtext.join(' '))
+                    });
+                    
+                    var $span = $('#example-colors figure span')
+                    $.each(WebBlocks.Blocks.Color.COLORS, function(){ $span.removeClass("text-"+this.toString()) });
+                    $span.addClass("text-"+cls)
+                    $span.each(function(){
+                        var spantext = $(this).html().split(' ');
+                        spantext[0] = cls.charAt(0).toUpperCase() + cls.slice(1);
+                        $(this).html(spantext.join(' '))
+                    });
+                    
+                    $('#example-colors figure > div, #example-colors figure > span').each(function(){
+                        updateFormattedSectionCode($(this).closest('section'))
+                    });
+                })
+                
+            })
+            
+        </script>
+        
+    </body>
+</html>

@@ -5,16 +5,23 @@ $(document).ready(function(){
      */
     
     var megaMenuItems = [
-        { 'title': 'Elements', 'items': [
+        { 'title': 'Site Structure', 'items': [
                 { 'title': 'Site Header', 'url': 'element_site_header.html' },
-                { 'title': 'Headings', 'url': 'element_headings.html' },
+                { 'title': 'Site Layouts', 'url': 'pattern_layouts.html' }
+        ]},
+        { 'title': 'Page Elements', 'items': [
                 { 'title': 'Messages', 'url': 'element_messages.html' },
                 { 'title': 'Buttons', 'url': 'element_buttons.html' },
+                { 'title': 'Badges', 'url': 'element_badges.html' },
                 { 'title': 'Badges', 'url': 'element_badges.html' }
         ]},
         { 'title': 'Patterns', 'items': [
-                { 'title': 'Layouts', 'url': 'pattern_layouts.html' },
-                { 'title': 'Quicklinks', 'url': 'pattern_quicklinks.html' }
+                { 'title': 'Site Layouts', 'url': 'pattern_layouts.html' },
+                { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' }
+        ]},
+        { 'title': 'Foundation', 'items': [
+                { 'title': 'Colors', 'url': 'foundation_colors.html' },
+                { 'title': 'Text', 'url': 'foundation_text.html' }
         ]}
     ];
     
@@ -37,6 +44,10 @@ $(document).ready(function(){
             $.each(this.items, function(){
                 var $inner_li = $(document.createElement('li')),
                     $inner_a = $(document.createElement('a')).attr('href', this.url).html(this.title)
+                    
+                if(this.subtitle){
+                    $inner_a.append('<br><small><em class="text-neutral">'+this.subtitle+'</em></small>')
+                }
                 $inner_ul.append($inner_li.append($inner_a));
             });
             $li.append($inner_ul);
