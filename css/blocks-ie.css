@@ -40,43 +40,43 @@ a:hover { color: #44557d; }
 /* line 5, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */
 .gradient.light.default, .gradient.fade.default { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFCFCFC', endColorstr='#FFF5F5F5', GradientType=0); }
 /* line 9, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */
-.gradient.light.primary, .gradient.fade.primary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5F2FF', endColorstr='#FFCCE6FF', GradientType=0); }
+.gradient.light.primary, .gradient.fade.primary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEBF5FF', endColorstr='#FFDBEDFF', GradientType=0); }
 /* line 13, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */
-.gradient.light.secondary, .gradient.fade.secondary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5F8FF', endColorstr='#FFCCF1FF', GradientType=0); }
+.gradient.light.secondary, .gradient.fade.secondary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF1F5F9', endColorstr='#FFE7EEF4', GradientType=0); }
 /* line 17, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */
-.gradient.light.tertiary, .gradient.fade.tertiary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFF7E5', endColorstr='#FFFFF0CC', GradientType=0); }
+.gradient.light.tertiary, .gradient.fade.tertiary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFF9EB', endColorstr='#FFFFF4DB', GradientType=0); }
 /* line 21, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */
-.gradient.light.neutral, .gradient.fade.neutral { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFE6E6E6', GradientType=0); }
+.gradient.light.neutral, .gradient.fade.neutral { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF5F5F5', endColorstr='#FFEDEDED', GradientType=0); }
 
 /* line 5, ../../../src/core/definitions/base/color/branding/_background_dark_gradient-ie.scss */
 .gradient.dark.default, .gradient.emphasize.default { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF212121', endColorstr='#FF1A1A1A', GradientType=0); }
 /* line 9, ../../../src/core/definitions/base/color/branding/_background_dark_gradient-ie.scss */
 .gradient.dark.primary, .gradient.emphasize.primary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF002142', endColorstr='#FF001A33', GradientType=0); }
 /* line 13, ../../../src/core/definitions/base/color/branding/_background_dark_gradient-ie.scss */
-.gradient.dark.secondary, .gradient.emphasize.secondary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF003042', endColorstr='#FF002533', GradientType=0); }
+.gradient.dark.secondary, .gradient.emphasize.secondary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF15232D', endColorstr='#FF101B23', GradientType=0); }
 /* line 17, ../../../src/core/definitions/base/color/branding/_background_dark_gradient-ie.scss */
 .gradient.dark.tertiary, .gradient.emphasize.tertiary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF422F00', endColorstr='#FF332400', GradientType=0); }
 /* line 21, ../../../src/core/definitions/base/color/branding/_background_dark_gradient-ie.scss */
 .gradient.dark.neutral, .gradient.emphasize.neutral { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF212121', endColorstr='#FF1A1A1A', GradientType=0); }
 
 /* line 5, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.info, .gradient.fade.info { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5F8FF', endColorstr='#FFCCF1FF', GradientType=0); }
+.gradient.light.info, .gradient.fade.info { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEBF9FF', endColorstr='#FFDBF5FF', GradientType=0); }
 /* line 9, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.important, .gradient.fade.important { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFE5F6', endColorstr='#FFFFCCED', GradientType=0); }
+.gradient.light.important, .gradient.fade.important { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFEBF8', endColorstr='#FFFFDBF2', GradientType=0); }
 /* line 13, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.success, .gradient.fade.success { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5FFF3', endColorstr='#FFCCFFE7', GradientType=0); }
+.gradient.light.success, .gradient.fade.success { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEBFFF5', endColorstr='#FFDBFFEE', GradientType=0); }
 /* line 17, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.warning, .gradient.fade.warning { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFDE5', endColorstr='#FFFFFACC', GradientType=0); }
+.gradient.light.warning, .gradient.fade.warning { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFDEB', endColorstr='#FFFFFCDB', GradientType=0); }
 /* line 21, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.error, .gradient.fade.error { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF9EBEB', endColorstr='#FFF4D7D7', GradientType=0); }
+.gradient.light.error, .gradient.fade.error { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAEFEF', endColorstr='#FFF7E3E3', GradientType=0); }
 /* line 25, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.danger, .gradient.fade.danger { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF9EBEB', endColorstr='#FFF4D7D7', GradientType=0); }
+.gradient.light.danger, .gradient.fade.danger { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAEFEF', endColorstr='#FFF7E3E3', GradientType=0); }
 /* line 29, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
 .gradient.light.inverse, .gradient.fade.inverse { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF666666', endColorstr='#FF4D4D4D', GradientType=0); }
 /* line 33, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.highlight, .gradient.fade.highlight { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFE5F6', endColorstr='#FFFFCCED', GradientType=0); }
+.gradient.light.highlight, .gradient.fade.highlight { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFEBF8', endColorstr='#FFFFDBF2', GradientType=0); }
 /* line 37, ../../../src/core/definitions/base/color/mood/_background_light_gradient-ie.scss */
-.gradient.light.required, .gradient.fade.required { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF9EBEB', endColorstr='#FFF9EBEB', GradientType=0); }
+.gradient.light.required, .gradient.fade.required { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAEFEF', endColorstr='#FFF9EBEB', GradientType=0); }
 
 /* line 5, ../../../src/core/definitions/base/color/mood/_background_dark_gradient-ie.scss */
 .gradient.dark.info, .gradient.emphasize.info { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF002533', endColorstr='#FF003042', GradientType=0); }
@@ -102,7 +102,7 @@ a:hover { color: #44557d; }
 /* line 9, ../../../src/core/definitions/base/color/branding/_background_gradient-ie.scss */
 .gradient.primary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF245B94', endColorstr='#FF003971', GradientType=0); }
 /* line 13, ../../../src/core/definitions/base/color/branding/_background_gradient-ie.scss */
-.gradient.secondary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF19BFFF', endColorstr='#FF00A5E5', GradientType=0); }
+.gradient.secondary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC7D9E5', endColorstr='#FFA4C1D5', GradientType=0); }
 /* line 17, ../../../src/core/definitions/base/color/branding/_background_gradient-ie.scss */
 .gradient.tertiary { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFC233', endColorstr='#FFFFB300', GradientType=0); }
 /* line 21, ../../../src/core/definitions/base/color/branding/_background_gradient-ie.scss */

@@ -12,9 +12,20 @@ var makeFormattedSection = function(element){
 var updateFormattedSectionCode = function(element){
     var $section = $(element),
         $figure = $section.children('figure'),
-        $code = $section.children('pre');
-    console.log($section)
-    $code.html($figure.html().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+        $code = $section.children('pre'),
+        $figureClone = $figure.clone();
+
+    $figureClone.find('[id]').each(function(){
+        if($(this).attr('id').indexOf('aria-') === 0)
+            $(this).attr('id', null)
+    })
+    $figureClone.find('[aria-labeledby]').each(function(){
+        if($(this).attr('aria-labeledby').indexOf('aria-') === 0)
+            $(this).attr('aria-labeledby',null)
+    })
+
+    $code.html($figureClone.html().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+    
     if(typeof prettyPrint !== 'undefined')
         prettyPrint();
 }

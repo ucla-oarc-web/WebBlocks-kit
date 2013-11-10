@@ -1,13 +1,14 @@
-.prettyprint:first-child {
+pre.prettyprint:first-child {
     margin-top: 0;
 }
 
-.prettyprint:last-child {
+pre.prettyprint:last-child {
     margin-bottom: 0;
 }
 
-.prettyprint {
+pre.prettyprint {
     font-size: 0.83em;
+    padding: 5px 10px !important;
 }
 
 main section {

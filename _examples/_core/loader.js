@@ -12,6 +12,7 @@ $(document).ready(function(){
                 { 'title': 'Badges', 'url': 'element_badges.html' }
         ]},
         { 'title': 'Patterns', 'items': [
+                { 'title': 'Layouts', 'url': 'pattern_layouts.html' },
                 { 'title': 'Quicklinks', 'url': 'pattern_quicklinks.html' }
         ]}
     ];
