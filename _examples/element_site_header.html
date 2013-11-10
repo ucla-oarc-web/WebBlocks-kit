@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            .code-target {
+                margin-bottom: 36px;
+            }
+            main.site > article > form {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            main.site > article {
+                margin-bottom: 40px;
+            }
+            main.site header.site {
+                padding-bottom: 1em; /* hide extra spacer for main.site */
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Elements: Site Header</h1>
+                
+                <article>
+                    
+                    <h2>Example</h2>
+                    
+                    <p>Basic example of the site header:</p>
+                    
+                    <section class="code-target">
+
+<header class="site primary inverted gradient clearfix">
+    <div class="container">
+        <hgroup>
+            <h1><a href="http://ucla.edu" class="ir logo">UCLA</a></h1>
+            <h2><a href="/">Subtitle</a></h2>
+        </hgroup>
+        <nav class="search">
+            <form class="form">
+                <label for="search-input">Site Search</label>
+                <input type="search" name="search" id="search-input">
+                <input type="submit">
+            </form>
+        </nav>
+        <nav class="mega">
+            <ul>
+                <li>
+                    <a>Basic Link</a>
+                </li>
+                <li>
+                    <h1><a href="#">Dropdown List</a></h1>
+                    <ul>
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                        <li><a href="#">Item 4</a></li>
+                        <li><a href="#">Item 5</a></li>
+                        <li><a href="#">Item 6</a></li>
+                        <li><a href="#">Item 7</a></li>
+                        <li><a href="#">Item 8</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h1><a href="#">Dropdown with Sublists</a></h1>
+                    <ul>
+                        <li>
+                            <h2>Sub-List 1</h2>
+                            <ul>
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>Sub-List 2</h2>
+                            <ul>
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>Sub-List 3</h2>
+                            <ul>
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>Sub-List 4</h2>
+                            <ul>
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+                        
+                    </section>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h2>Configuration Helper</h2>
+                    
+                    <p>Modify the form to tweak elements (nav-bar is not yet supported through this configuration helper):</p>
+                
+                    <form class="form horizontal">
+                        <div class="control">
+                            <label>Subtitle</label>
+                            <input type="text" name="subtitle" value="Subtitle">
+                        </div>
+                        <div class="control">
+                            <label>Subtitle Link</label>
+                            <input type="text" name="subtitle_link" value="/">
+                        </div>
+                        <div class="control">
+                            <label>Search Label (accessible)</label>
+                            <input type="text" name="search_label" value="Site Search">
+                        </div>
+                        <div class="control">
+                            <label>Color</label>
+                            <select name="color">
+                            </select>
+                        </div>
+                    </form>
+                    
+                    <section class="code-target">
+
+<header class="site primary inverted gradient clearfix">
+    <div class="container">
+        <hgroup>
+            <h1><a href="http://ucla.edu" class="ir logo">UCLA</a></h1>
+            <h2><a href="/">Subtitle</a></h2>
+        </hgroup>
+        <nav class="search">
+            <form class="form">
+                <label for="search-input">Site Search</label>
+                <input type="search" name="search" id="search-input">
+                <input type="submit">
+            </form>
+        </nav>
+    </div>
+</header>
+                        
+                    </section>
+                    
+                </article>
+
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                
+                WebBlocks.navMegaMenu.call($('main.site > article header.site'));
+                
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+                
+                $('main.site > article form [name="color"]').each(function(){
+                    var $ele = $(this);
+                    $.each(WebBlocks.Blocks.Color.COLORS, function(){ $ele.append('<option>'+this+'</option>') });
+                })
+                
+                $('main.site > article form [name="subtitle"]').change(function(){
+                    var $header = $(this).closest('article').find('.code-target header.site');
+                    $header.find('hgroup h2').html($(this).val())
+                    updateFormattedSectionCode($header.closest('section'))
+                })
+                
+                $('main.site > article form [name="subtitle_link"]').change(function(){
+                    var $header = $(this).closest('article').find('.code-target header.site');
+                    $header.find('hgroup h2 a').attr('href', $(this).val())
+                    updateFormattedSectionCode($header.closest('section'))
+                })
+                
+                $('main.site > article form [name="search_label"]').change(function(){
+                    var $header = $(this).closest('article').find('.code-target header.site');
+                    $header.find('nav.search label').html($(this).val())
+                    updateFormattedSectionCode($header.closest('section'))
+                })
+                
+                $('main.site > article form [name="color"]').change(function(){
+                    var $header = $(this).closest('article').find('.code-target header.site');
+                    $.each(WebBlocks.Blocks.Color.COLORS, function(){ $header.removeClass(this.toString()) });
+                    $header.addClass($(this).val())
+                    updateFormattedSectionCode($header.closest('section'))
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

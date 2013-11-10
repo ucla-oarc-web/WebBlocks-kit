@@ -6,7 +6,8 @@ $(document).ready(function(){
     
     var megaMenuItems = [
         { 'title': 'Elements', 'items': [
-                { 'title': 'Headers', 'url': 'element_headers.html' },
+                { 'title': 'Site Header', 'url': 'element_site_header.html' },
+                { 'title': 'Headings', 'url': 'element_headings.html' },
                 { 'title': 'Messages', 'url': 'element_messages.html' },
                 { 'title': 'Buttons', 'url': 'element_buttons.html' },
                 { 'title': 'Badges', 'url': 'element_badges.html' }
@@ -43,7 +44,7 @@ $(document).ready(function(){
             
         $ul.append($li);
     })
-    $('header.site nav.mega').append($ul);
+    $('header.site:not(main header) nav.mega').append($ul);
     
     WebBlocks.navMegaMenu.call($('header.site'));
     
