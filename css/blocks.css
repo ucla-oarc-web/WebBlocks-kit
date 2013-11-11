@@ -228,6 +228,36 @@ nav.list.horizontal > ul > li:not(:first-child) { padding-left: 20px; }
 /* line 10, ../../../../extension/blocks/nav/list/_horizontal.scss */
 nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -10px; }
 
+@media (min-width: 481px) { /* line 38, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > * { display: block; float: left; min-height: 1px; box-sizing: border-box; }
+  /* line 15, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:not(:first-child) { margin-left: 2.5641%; }
+  /* line 51, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(2), .cluster > *:first-child:nth-last-child(2) ~ *, .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 48.71795%; } }
+@media (min-width: 481px) and (max-width: 640px) { /* line 60, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(3), .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(2n+1) { margin-left: 0; }
+  /* line 65, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(3) ~ *:last-child, .cluster > *:first-child:nth-last-child(5) ~ *:last-child { margin-left: 26.92308%; } }
+@media (min-width: 641px) { /* line 78, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 31.62393%; } }
+@media (min-width: 481px) and (max-width: 768px) { /* line 86, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(4) ~ *:nth-child(3) { margin-left: 0; } }
+@media (min-width: 769px) { /* line 95, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ * { width: 23.07693%; } }
+@media (min-width: 641px) and (max-width: 960px) { /* line 103, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(4) { margin-left: 18.37607%; }
+  /* line 107, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(4) { margin-left: 0; } }
+@media (min-width: 960px) { /* line 116, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ * { width: 17.94872%; }
+  /* line 121, ../../../../extension/blocks/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
+
+/* line 3, ../../../../extension/ucla/pattern/_quicklinks.scss */
+.quicklinks > figure { text-align: center; }
+/* line 7, ../../../../extension/ucla/pattern/_quicklinks.scss */
+.quicklinks > figure > figcaption { margin-bottom: 10px; }
+
 /* line 5, ../../../src/core/definitions/base/color/branding/_background_light.scss */
 .light.default, .light.badge, .badge.message, .default.message, a.message.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), button.message.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.message[type="button"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.message[type="reset"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.message[type="submit"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), nav.message.bar:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), a.light.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), button.light.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.light[type="button"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.light[type="reset"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.light[type="submit"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), nav.light.bar:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), .fade.default, .fade.badge, a.fade.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), button.fade.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.fade[type="button"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.fade[type="reset"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.fade[type="submit"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), nav.fade.bar:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required) { color: #2f2f2f; background-color: whitesmoke; border-color: #b3b3b3; text-shadow: none; }
 /* line 9, ../../../src/core/definitions/base/color/branding/_background_light.scss */
@@ -442,7 +472,7 @@ nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: le
 .float-clear { clear: both; }
 
 /* line 14, ../../../src/core/adapter/base/block/_float.scss */
-.float-container:not(.clearfix), nav.list.horizontal:not(.clearfix), .quicklinks:not(.clearfix) { overflow: hidden; }
+.float-container:not(.clearfix), nav.list.horizontal:not(.clearfix), .cluster:not(.clearfix) { overflow: hidden; }
 
 /* line 17, ../../../src/core/definitions/base/block/_float.scss */
 .clearfix, .row, nav.bar { *zoom: 1; }
@@ -718,7 +748,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .ir br { display: none; }
 
 /* line 1, ../../../src/core/definitions/base/structure/_constrained.scss */
-.constrained, .quicklinks img { max-width: 100%; }
+.constrained, .cluster img { max-width: 100%; }
 
 /* line 1, ../../../src/core/definitions/base/structure/_container.scss */
 .container { display: block; width: 100%; margin: auto; max-width: 1024px; }
@@ -2279,25 +2309,6 @@ site.main > h1 { text-transform: uppercase; }
 .site.audience a { text-decoration: none; font-weight: bold; }
 /* line 11, ../../../../sass/includes/site/_.audience.scss */
 .site.audience a:hover { text-decoration: underline; }
-
-/* line 28, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-.quicklinks > figure { text-align: center; }
-/* line 32, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-.quicklinks > figure > figcaption { margin-bottom: 10px; }
-@media (min-width: 641px) { /* line 42, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure { float: left; min-height: 1px; box-sizing: border-box; }
-  /* line 15, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure:not(:first-child) { margin-left: 2.5641%; }
-  /* line 47, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure:first-child:nth-last-child(2), .quicklinks > figure:first-child:nth-last-child(2) ~ figure { width: 48.71795%; }
-  /* line 52, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure:first-child:nth-last-child(3), .quicklinks > figure:first-child:nth-last-child(3) ~ figure { width: 31.62393%; }
-  /* line 57, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure:first-child:nth-last-child(4), .quicklinks > figure:first-child:nth-last-child(4) ~ figure { width: 23.07693%; }
-  /* line 62, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure:first-child:nth-last-child(5), .quicklinks > figure:first-child:nth-last-child(5) ~ figure { width: 17.94872%; }
-  /* line 67, ../../../../sass/includes/site/pattern/_.quicklinks.scss */
-  .quicklinks > figure:first-child:nth-last-child(6), .quicklinks > figure:first-child:nth-last-child(6) ~ figure { width: 14.52992%; } }
 
 /* line 1, ../../../../sass/includes/utility/ir/_logo.scss */
 .ir.logo { background-image: url("../img/site/logo.png"); width: 144px; height: 46px; }
