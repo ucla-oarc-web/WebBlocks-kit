@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            .cluster > *, .row > [class*="panel-"] {
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Grids</h1>
+                
+                <article>
+                    
+                    <h2>Equal-width</h2>
+                    
+                    <h4>Cluster</h4>
+                    
+                    <p>The <var>cluster</var> element is the simplest way to arrange between two and six equal-width panels:</p>
+                    
+                    <div class="code-target">
+
+<div class="cluster">
+    <div>1</div>
+    <div>2</div>
+</div>
+<div class="cluster">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<div class="cluster">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+<div class="cluster">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>
+<div class="cluster">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+                        
+                    </div>
+                    
+                    <p>In equal-width scenarios, this class is recommended unless the cluster's collapsing behavior is not desired.</p>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h4>Row</h4>
+                    
+                    <p>The <var>row</var> element can directly arrange two, three, four, six or twelve equal-width panels:</p>
+                    
+                    <div class="code-target">
+<div class="row">
+    <div class="panel-6">1</div>
+    <div class="panel-6">2</div>
+</div>
+<div class="row">
+    <div class="panel-4">1</div>
+    <div class="panel-4">2</div>
+    <div class="panel-4">3</div>
+</div>
+<div class="row">
+    <div class="panel-3">1</div>
+    <div class="panel-3">2</div>
+    <div class="panel-3">3</div>
+    <div class="panel-3">4</div>
+</div>
+<div class="row">
+    <div class="panel-2">1</div>
+    <div class="panel-2">2</div>
+    <div class="panel-2">3</div>
+    <div class="panel-2">4</div>
+    <div class="panel-2">5</div>
+    <div class="panel-2">6</div>
+</div>
+<div class="row">
+    <div class="panel-1">1</div>
+    <div class="panel-1">2</div>
+    <div class="panel-1">3</div>
+    <div class="panel-1">4</div>
+    <div class="panel-1">5</div>
+    <div class="panel-1">6</div>
+    <div class="panel-1">7</div>
+    <div class="panel-1">8</div>
+    <div class="panel-1">9</div>
+    <div class="panel-1">10</div>
+    <div class="panel-1">11</div>
+    <div class="panel-1">12</div>
+</div>
+                    </div>
+                    
+                    <p>A nested set of <var>row</var> elements can be used for eight or nine equal-width panels:</p>
+                    
+                    <div class="code-target">
+<div class="row">
+    <div class="panel-6">
+        <div class="row">
+            <div class="panel-3">1</div>
+            <div class="panel-3">2</div>
+            <div class="panel-3">3</div>
+            <div class="panel-3">4</div>
+        </div>
+    </div>
+    <div class="panel-6">
+        <div class="row">
+            <div class="panel-3">5</div>
+            <div class="panel-3">6</div>
+            <div class="panel-3">7</div>
+            <div class="panel-3">8</div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="panel-4">
+        <div class="row">
+            <div class="panel-4">1</div>
+            <div class="panel-4">2</div>
+            <div class="panel-4">3</div>
+        </div>
+    </div>
+    <div class="panel-4">
+        <div class="row">
+            <div class="panel-4">4</div>
+            <div class="panel-4">5</div>
+            <div class="panel-4">6</div>
+        </div>
+    </div>
+    <div class="panel-4">
+        <div class="row">
+            <div class="panel-4">7</div>
+            <div class="panel-4">8</div>
+            <div class="panel-4">9</div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    
+                    <p>A row may be set to collapse at a specific breakpoint:</p>
+                    
+                    <div class="code-target">
+<div class="row medium-small-collapse">
+    <div class="panel-6">
+        <div class="row xsmall-collapse">
+            <div class="panel-3">1</div>
+            <div class="panel-3">2</div>
+            <div class="panel-3">3</div>
+            <div class="panel-3">4</div>
+        </div>
+    </div>
+    <div class="panel-6">
+        <div class="row xsmall-collapse">
+            <div class="panel-3">5</div>
+            <div class="panel-3">6</div>
+            <div class="panel-3">7</div>
+            <div class="panel-3">8</div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    
+                    <p>The available breakpoint classes are <var>xxsmall-collapse</var>, <var>xsmall-collapse</var>, <var>small-collapse</var>, <var>medium-small-collapse</var>, <var>medium-collapse</var>, <var>medium-large-collapse</var> and <var>large-collapse</var>.</p>
+                    
+                    <p>A row may also be rendered right-to-left above its collapse point:</p>
+                    
+                    <div class="code-target">
+<div class="row right">
+    <div class="panel-3">1</div>
+    <div class="panel-3">2</div>
+    <div class="panel-3">3</div>
+    <div class="panel-3">4</div>
+</div>
+                    </div>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h2>Unequal-width</h2>
+                    
+                    <p>The <var>row</var> class supports unequal-width arrangements by using a set of <var>panel-X</var> children where the total value of <var>X</var> across all panels in the row does not exceed <var>12</var>.</p>
+                    
+                    <div class="code-target">
+<div class="row">
+    <div class="panel-4">33%</div>
+    <div class="panel-8">67%</div>
+</div>
+<div class="row">
+    <div class="panel-3">25%</div>
+    <div class="panel-9">75%</div>
+</div>
+<div class="row">
+    <div class="panel-1">8%</div>
+    <div class="panel-2">13%</div>
+    <div class="panel-3">25%</div>
+    <div class="panel-6">50%</div>
+</div>
+                    </div>
+                    
+                    <p>Rows can be nested. The width of each panel is proportional to the width of its containing row:</p>
+                    
+                    <div class="code-target">
+<div class="row">
+    <div class="panel-6">
+        <div class="row">
+            <div class="panel-6">50% / 50% = 25%</div>
+            <div class="panel-6">50% / 50% = 25%</div>
+        </div>
+    </div>
+    <div class="panel-6">50%</div>
+</div>
+                    </div>
+                    
+                </article>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

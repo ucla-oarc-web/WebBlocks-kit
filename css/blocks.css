@@ -228,29 +228,33 @@ nav.list.horizontal > ul > li:not(:first-child) { padding-left: 20px; }
 /* line 10, ../../../../extension/blocks/nav/list/_horizontal.scss */
 nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -10px; }
 
-@media (min-width: 481px) { /* line 38, ../../../../extension/blocks/structure/_cluster.scss */
+/* line 32, ../../../../extension/blocks/structure/_cluster.scss */
+.cluster.with-bottom-margin { margin-bottom: 0; }
+/* line 34, ../../../../extension/blocks/structure/_cluster.scss */
+.cluster.with-bottom-margin > * { margin-bottom: 0.5em; }
+@media (min-width: 481px) { /* line 45, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > * { display: block; float: left; min-height: 1px; box-sizing: border-box; }
   /* line 15, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:not(:first-child) { margin-left: 2.5641%; }
-  /* line 51, ../../../../extension/blocks/structure/_cluster.scss */
+  /* line 58, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(2), .cluster > *:first-child:nth-last-child(2) ~ *, .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 48.71795%; } }
-@media (min-width: 481px) and (max-width: 640px) { /* line 60, ../../../../extension/blocks/structure/_cluster.scss */
+@media (min-width: 481px) and (max-width: 640px) { /* line 67, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(3), .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(2n+1) { margin-left: 0; }
-  /* line 65, ../../../../extension/blocks/structure/_cluster.scss */
+  /* line 72, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(3) ~ *:last-child, .cluster > *:first-child:nth-last-child(5) ~ *:last-child { margin-left: 26.92308%; } }
-@media (min-width: 641px) { /* line 78, ../../../../extension/blocks/structure/_cluster.scss */
+@media (min-width: 641px) { /* line 85, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 31.62393%; } }
-@media (min-width: 481px) and (max-width: 768px) { /* line 86, ../../../../extension/blocks/structure/_cluster.scss */
+@media (min-width: 481px) and (max-width: 768px) { /* line 93, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(4) ~ *:nth-child(3) { margin-left: 0; } }
-@media (min-width: 769px) { /* line 95, ../../../../extension/blocks/structure/_cluster.scss */
+@media (min-width: 769px) { /* line 102, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ * { width: 23.07693%; } }
-@media (min-width: 641px) and (max-width: 960px) { /* line 103, ../../../../extension/blocks/structure/_cluster.scss */
+@media (min-width: 641px) and (max-width: 960px) { /* line 110, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(4) { margin-left: 18.37607%; }
-  /* line 107, ../../../../extension/blocks/structure/_cluster.scss */
+  /* line 114, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(4) { margin-left: 0; } }
-@media (min-width: 960px) { /* line 116, ../../../../extension/blocks/structure/_cluster.scss */
+@media (min-width: 960px) { /* line 123, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ * { width: 17.94872%; }
-  /* line 121, ../../../../extension/blocks/structure/_cluster.scss */
+  /* line 128, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
 
 /* line 3, ../../../../extension/ucla/pattern/_quicklinks.scss */
