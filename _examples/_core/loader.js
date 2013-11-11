@@ -7,7 +7,7 @@ $(document).ready(function(){
     var megaMenuItems = [
         { 'title': 'Site Structure', 'items': [
                 { 'title': 'Site Header', 'url': 'element_site_header.html' },
-                { 'title': 'Site Layouts', 'url': 'pattern_layouts.html' }
+                { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' }
         ]},
         { 'title': 'Page Elements', 'items': [
                 { 'title': 'Messages', 'url': 'element_messages.html' },
@@ -16,7 +16,7 @@ $(document).ready(function(){
                 { 'title': 'Badges', 'url': 'element_badges.html' }
         ]},
         { 'title': 'Patterns', 'items': [
-                { 'title': 'Site Layouts', 'url': 'pattern_layouts.html' },
+                { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
                 { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' }
         ]},
         { 'title': 'Foundation', 'items': [
