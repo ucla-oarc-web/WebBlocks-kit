@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            main.site figure section {
+                margin-bottom: inherit;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1 class='margin-bottom border-bottom'>Text Groupings</h1>
+                
+                <section>
+                    
+                    <h2>Introduction</h2>
+                    
+                    <div class="code-target">
+<header>
+    <h2>Introduction</h2>
+    <p>This grouping should be an introduction to the contents of the page as a whole.</p>
+</header>
+                    </div>
+                    
+                </section>
+                
+                <section class='margin-top border-top'>
+                    
+                    <h2>Sections</h2>
+                    
+                    <p>Includes a header and one or more paragraphs of text:</p>
+                    
+                    <div class="code-target margin-bottom">
+<section>
+    <h3>Section</h3>
+    <p>This grouping should be used around a heading and one or more paragraphs of content.</p>
+</section>
+                    </div>
+                    
+                    <p>Optionally may use a row to place a supporting image to the left of the header and one or more paragraphs:</p>
+                    
+                    <div class="code-target margin-bottom">
+<section class='row right'>
+    <figure class='panel-4'>
+        <img class='constrained' alt='Description of the image'>
+        <figcaption class='text-small text-neutral margin-bottom'>Caption for the image</figcaption>
+    </figure>
+    <div class='panel-8'>
+        <h3>Section</h3>
+        <p>This grouping should be used around a heading and one or more paragraphs of content.</p>
+    </div>
+</section>
+                    </div>
+                    
+                    <p>Image may be moved over to the right of the header and one or more paragraphs without changing collapse order:</p>
+                    
+                    <div class="code-target">
+<section class='row'>
+    <figure class='panel-4'>
+        <img class='constrained' alt='Description of the image'>
+        <figcaption class='text-small text-neutral margin-bottom'>Caption for the image</figcaption>
+    </figure>
+    <div class='panel-8'>
+        <h3>Section</h3>
+        <p>This grouping should be used around a heading and one or more paragraphs of content.</p>
+    </div>
+</section>
+                    </div>
+                    
+                </section>
+                
+                <section class='margin-top border-top'>
+                    
+                    <h2>Putting Multiple Sections Together</h2>
+                    
+                    <p>Margin and border classes may be used to string an introduction and content sections together:</p>
+                    
+                    <div class="code-target">
+<div>
+    <header>
+        <h2>Introduction</h2>
+        <p>This grouping should be an introduction to the contents of the page as a whole.</p>
+    </header>
+    <section class='row margin-top border-top border-secondary'>
+        <figure class='panel-4'>
+            <img class='constrained' alt='Description of the image'>
+            <figcaption class='text-small text-neutral margin-bottom'>Caption for the image</figcaption>
+        </figure>
+        <div class='panel-8'>
+            <h3>First Section</h3>
+            <p>This grouping should be used around a heading and one or more paragraphs of content.</p>
+        </div>
+    </section>
+    <section class='row right margin-top border-top border-secondary'>
+        <figure class='panel-4'>
+            <img class='constrained' alt='Description of the image'>
+            <figcaption class='text-small text-neutral margin-bottom'>Caption for the image</figcaption>
+        </figure>
+        <div class='panel-8'>
+            <h3>Second Section</h3>
+            <p>This grouping should be used around a heading and one or more paragraphs of content.</p>
+        </div>
+    </section>
+</div>
+                    </div>
+                    
+                </section>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

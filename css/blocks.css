@@ -229,9 +229,9 @@ nav.list.horizontal > ul > li:not(:first-child) { padding-left: 20px; }
 nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -10px; }
 
 /* line 32, ../../../../extension/blocks/structure/_cluster.scss */
-.cluster.with-bottom-margin { margin-bottom: 0; }
+.cluster.margin-bottom { margin-bottom: 0; }
 /* line 34, ../../../../extension/blocks/structure/_cluster.scss */
-.cluster.with-bottom-margin > * { margin-bottom: 0.5em; }
+.cluster.margin-bottom > * { margin-bottom: 0.5em; }
 @media (min-width: 481px) { /* line 45, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > * { display: block; float: left; min-height: 1px; box-sizing: border-box; }
   /* line 15, ../../../../extension/blocks/structure/_cluster.scss */
@@ -2299,12 +2299,6 @@ site.main > h1 { text-transform: uppercase; }
 /* line 8, ../../../../sass/includes/site/main/_basic.scss */
 .message h1, .message h2, .message h3, .message h4, .message h5, .message h6, nav.list h1, nav.list h2, nav.list h3, nav.list h4, nav.list h5, nav.list h6, nav.search h1, nav.search h2, nav.search h3, nav.search h4, nav.search h5, nav.search h6 { color: inherit; }
 
-/* line 12, ../../../../sass/includes/site/main/_basic.scss */
-[class*="panel-"] > .inner { padding: 10px; }
-
-/* line 15, ../../../../sass/includes/site/main/_basic.scss */
-.with-bottom-margin, .with-bottom-margin-panels > [class*="panel-"] { margin-bottom: 0.5em; }
-
 /* line 1, ../../../../sass/includes/site/_.audience.scss */
 .site.audience { font-size: 0.8em; overflow: auto; padding: 0.4em 0; }
 /* line 5, ../../../../sass/includes/site/_.audience.scss */
@@ -2314,8 +2308,68 @@ site.main > h1 { text-transform: uppercase; }
 /* line 11, ../../../../sass/includes/site/_.audience.scss */
 .site.audience a:hover { text-decoration: underline; }
 
-/* line 1, ../../../../sass/includes/utility/ir/_logo.scss */
+/* line 1, ../../../../sass/includes/utility/_ir.scss */
 .ir.logo { background-image: url("../img/site/logo.png"); width: 144px; height: 46px; }
 
 /* line 1, ../../../../sass/includes/utility/_container.scss */
 .container.main { background-color: white; }
+
+/* line 1, ../../../../sass/includes/utility/_inner-container.scss */
+[class*="panel-"] > .inner-container { padding: 10px; }
+
+/* line 1, ../../../../sass/includes/utility/_margin.scss */
+.margin-bottom, .panels-margin-bottom > [class*="panel-"] { margin-bottom: 10px; }
+
+/* line 5, ../../../../sass/includes/utility/_margin.scss */
+.margin-top, .panels-margin-top > [class*="panel-"] { margin-top: 10px; }
+
+/* line 9, ../../../../sass/includes/utility/_margin.scss */
+.margin-top.border-top { margin-top: 16px; padding-top: 20px; }
+
+/* line 14, ../../../../sass/includes/utility/_margin.scss */
+.margin-bottom.border-bottom { margin-bottom: 20px; padding-bottom: 16px; }
+
+/* line 1, ../../../../sass/includes/utility/_text.scss */
+h1 .text-small { font-size: 0.6em; }
+
+/* line 5, ../../../../sass/includes/utility/_text.scss */
+h2 .text-small { font-size: 0.65em; }
+
+/* line 9, ../../../../sass/includes/utility/_text.scss */
+h3 .text-small { font-size: 0.7em; }
+
+/* line 13, ../../../../sass/includes/utility/_text.scss */
+h4 .text-small { font-size: 0.8em; }
+
+/* line 17, ../../../../sass/includes/utility/_text.scss */
+h5 .text-small { font-size: 0.9em; }
+
+/* line 21, ../../../../sass/includes/utility/_text.scss */
+h6 .text-small { font-size: 0.9em; }
+
+/* line 25, ../../../../sass/includes/utility/_text.scss */
+.text-small { font-size: 0.85em; }
+
+/* line 1, ../../../../sass/includes/utility/_border.scss */
+.border-top { border-top: 1px solid #b3b3b3; padding-top: 10px; }
+
+/* line 6, ../../../../sass/includes/utility/_border.scss */
+.border-bottom { border-bottom: 1px solid #b3b3b3; padding-bottom: 10px; }
+
+/* line 11, ../../../../sass/includes/utility/_border.scss */
+.border-strong { border-width: 3px; }
+
+/* line 15, ../../../../sass/includes/utility/_border.scss */
+.border-primary { border-color: #66b3ff; }
+
+/* line 19, ../../../../sass/includes/utility/_border.scss */
+.border-secondary { border-color: #96b8cf; }
+
+/* line 23, ../../../../sass/includes/utility/_border.scss */
+.border-tertiary { border-color: #ffd166; }
+
+/* line 27, ../../../../sass/includes/utility/_border.scss */
+.border-neutral { border-color: #b3b3b3; }
+
+/* line 31, ../../../../sass/includes/utility/_border.scss */
+.border-default { border-color: #b3b3b3; }

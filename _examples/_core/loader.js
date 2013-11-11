@@ -17,6 +17,7 @@ $(document).ready(function(){
         ]},
         { 'title': 'Patterns', 'items': [
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
+                { 'title': 'Grouping Text', 'url': 'pattern_text.html' },
                 { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' }
         ]},
         { 'title': 'Foundation', 'items': [
