@@ -2328,7 +2328,7 @@ h1, h2, h3, h4, h5, h6 { color: #4e8db6; }
 site.main > h1 { text-transform: uppercase; }
 
 /* line 8, ../../../../sass/includes/site/main/_basic.scss */
-.message h1, .message h2, .message h3, .message h4, .message h5, .message h6, nav.list h1, nav.list h2, nav.list h3, nav.list h4, nav.list h5, nav.list h6, nav.search h1, nav.search h2, nav.search h3, nav.search h4, nav.search h5, nav.search h6, nav.tabs h1, nav.tabs h2, nav.tabs h3, nav.tabs h4, nav.tabs h5, nav.tabs h6 { color: inherit; }
+.message h1, .message h2, .message h3, .message h4, .message h5, .message h6, nav.list h1, nav.list h2, nav.list h3, nav.list h4, nav.list h5, nav.list h6, nav.search h1, nav.search h2, nav.search h3, nav.search h4, nav.search h5, nav.search h6, nav.tabs h1, nav.tabs h2, nav.tabs h3, nav.tabs h4, nav.tabs h5, nav.tabs h6, nav.bar h1, nav.bar h2, nav.bar h3, nav.bar h4, nav.bar h5, nav.bar h6 { color: inherit; }
 
 /* line 1, ../../../../sass/includes/site/_.audience.scss */
 .site.audience { font-size: 0.8em; overflow: auto; padding: 0.4em 0; }

@@ -13,7 +13,8 @@ $(document).ready(function(){
         { 'title': 'Page Elements', 'items': [
                 { 'title': 'Messages', 'url': 'element_messages.html' },
                 { 'title': 'Buttons', 'url': 'element_buttons.html' },
-                { 'title': 'Badges', 'url': 'element_badges.html' }
+                { 'title': 'Badges', 'url': 'element_badges.html' },
+                { 'title': 'Navigation', 'url': 'element_navigation.html' }
         ]},
         { 'title': 'Patterns', 'items': [
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },

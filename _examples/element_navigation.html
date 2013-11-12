@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            main.site figure section {
+                margin-bottom: inherit;
+            }
+            main.site > article {
+                margin: 20px 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Navigation</h1>
+                
+                <article>
+                    
+                    <h2>Nav List</h2>
+                    
+                    <div class="code-target">
+<nav class="list">
+    <h1>Optional Header</h1>
+    <ul>
+        <li><a href="path/to/link">Item 1</a></li>
+        <li><a href="path/to/link">Item 2</a></li>
+    </ul>
+    <h1>Second Header</h1>
+    <ul>
+        <li><a href="path/to/link">Item 3</a></li>
+        <li><a href="path/to/link">Item 4</a></li>
+    </ul>
+</nav>
+                    </div>
+                    
+                    <p><em>See <a href="pattern_site_layouts.html">Patterns: Site Layouts</a> for examples using this in actual content, and see <a href='http://ucla.github.io/WebBlocks/doc/#API/Entity/Nav/List' target='_blank'>WebBlocks Documentation: Entity/Nav/List</a> for a full description of features.</em></p>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h2>Nav Tabs</h2>
+                    
+                    <div class="code-target">
+<nav class="tabs">
+    <h1>Optional Header</h1>
+    <ul>
+        <li><a href="path/to/link">Item 1</a></li>
+        <li><a href="path/to/link">Item 2</a></li>
+        <li><a href="path/to/link">Item 3</a></li>
+        <li><a href="path/to/link">Item 4</a></li>
+    </ul>
+</nav>
+                    </div>
+                    
+                    <p><em>See <a href='pattern_tabs.html'>Patterns: Tabbed Sections</a> for more.</em></p>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h2>Nav Breadcrumbs</h2>
+                    
+                    <div class="code-target">
+<nav class="breadcrumb">
+    <ul>
+        <li><a href="path/to/link">Item 1</a> <span class="divider">/</span></li>
+        <li><a href="path/to/link">Item 2</a> <span class="divider">/</span></li>
+        <li><a href="path/to/link">Item 3</a> <span class="divider">/</span></li>
+        <li><a href="path/to/link">Item 4</a></li>
+    </ul>
+</nav>
+                    </div>
+                    
+                    <p><em>See <a href='http://ucla.github.io/WebBlocks/doc/#API/Entity/Nav/Breadcrumb' target='_blank'>WebBlocks Documentation: Entity/Nav/Breadcrumb</a> for a full description of features.</em></p>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h2>Nav Bar</h2>
+                    
+                    <form class='form horizontal'>
+                        <div class='control'>
+                            <label>Nav Bar Color</label>
+                            <select id='nav-bar-color' class='select-colors'></select>
+                        </div>
+                    </form>
+                    
+                    <div class="code-target">
+<nav class="bar primary">
+    <h1>Optional Header</h1>
+    <ul>
+        <li><a href="path/to/link">Item 1</a></li>
+        <li><a href="path/to/link">Item 2</a></li>
+        <li><a href="path/to/link">Item 3</a></li>
+        <li><a href="path/to/link">Item 4</a></li>
+    </ul>
+</nav>
+                    </div>
+                    
+                    <p><em>See <a href='http://ucla.github.io/WebBlocks/doc/#API/Entity/Nav/Bar' target='_blank'>WebBlocks Documentation: Entity/Nav/Bar</a> for a full description of features.</em></p>
+                    
+                </article>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+                
+                var $selectColors = $('.select-colors');
+                $.each(WebBlocks.Blocks.Color.COLORS, function(){ $selectColors.append('<option>'+this+'</option>') });
+                
+                $('#nav-bar-color').change(function(){
+                    var $ele = $('.code-target nav.bar');
+                    $.each(WebBlocks.Blocks.Color.COLORS, function(){ $ele.removeClass(this.toString()) });
+                    $ele.addClass($(this).val())
+                    $prettyprint = $ele.closest('section').find('pre.prettyprint');
+                    console.log($prettyprint.html().replace(/"bar (.*?)"/, '"bar '+$(this).val()+'"'))
+                    $prettyprint.html($prettyprint.html().replace(/"bar (.*?)"/, '"bar '+$(this).val()+'"'))
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>
