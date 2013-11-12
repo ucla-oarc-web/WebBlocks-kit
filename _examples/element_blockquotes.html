@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            main.site figure section {
+                margin-bottom: inherit;
+            }
+            main.site > article {
+                margin: 20px 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Blockquotes</h1>
+                
+                <h4>Basic</h4>
+                
+                <div class="code-target">
+<blockquote class="blockquote">
+    <p>Blockquote text</p>
+</blockquote>
+                </div>
+                
+                <h4>With Attribution</h4>
+                
+                <div class="code-target">
+<figure class="blockquote">
+    <blockquote>
+        <p>Blockquote text</p>
+    </blockquote>
+    <figcaption>
+        Blockquote attribution
+    </figcaption>
+</figure>
+                </div>
+                
+                <h4>As Callout</h4>
+                
+                <div class="code-target">
+<figure class="blockquote callout">
+    <blockquote>
+        <p>Blockquote text</p>
+    </blockquote>
+    <figcaption>
+        Blockquote attribution
+    </figcaption>
+</figure>
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            main.site figure section {
+                margin-bottom: inherit;
+            }
+            main.site > article {
+                margin: 20px 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Tables</h1>
+                
+                <h4>Basic</h4>
+                
+                <div class="code-target">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Column 1</td>
+            <td>Row 2 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+                <h4>Bordered</h4>
+                
+                <div class="code-target">
+<table class="table bordered">
+    <thead>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Column 1</td>
+            <td>Row 2 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+                <h4>Hover</h4>
+                
+                <div class="code-target">
+<table class="table hover">
+    <thead>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Column 1</td>
+            <td>Row 2 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+                <h4>Striped</h4>
+                
+                <div class="code-target">
+<table class="table striped">
+    <thead>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Column 1</td>
+            <td>Row 2 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 3 Column 1</td>
+            <td>Row 3 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 4 Column 1</td>
+            <td>Row 4 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+                <h4>Caption</h4>
+                
+                <div class="code-target">
+<table class="table">
+    <caption>Caption Text</caption>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+                <div class="code-target">
+<table class="table">
+    <caption class="bottom">Caption Text</caption>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+                <h4>Putting It All Together</h4>
+                
+                <div class="code-target">
+<table class="table striped bordered hover">
+    <caption class="bottom">Caption Text</caption>
+    <thead>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Column 1</td>
+            <td>Row 2 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 3 Column 1</td>
+            <td>Row 3 Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 4 Column 1</td>
+            <td>Row 4 Column 2</td>
+        </tr>
+    </tbody>
+</table>
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

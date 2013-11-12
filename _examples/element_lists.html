@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            main.site figure section {
+                margin-bottom: inherit;
+            }
+            main.site > article {
+                margin: 20px 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Lists</h1>
+                
+                <h4>Basic</h4>
+                
+                <div class="code-target">
+<ul class="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+                </div>
+                
+                <div class="code-target">
+<ol class="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+                </div>
+                
+                <h4>Unstyled</h4>
+                
+                <div class="code-target">
+<ul class="unstyled list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+                </div>
+                
+                <div class="code-target">
+<ol class="unstyled list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+                </div>
+                
+                <h4>Ordered Styles</h4>
+                
+                <div class="code-target">
+<ol class="list lower-roman">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+                </div>
+                
+                <div class="code-target">
+<ol class="list upper-roman">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+                </div>
+                
+                <div class="code-target">
+<ol class="list lower-alpha">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+                </div>
+                
+                <div class="code-target">
+<ol class="list upper-alpha">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+                </div>
+                
+                <h4>Outline</h4>
+                
+                <div class="code-target">
+<ol class="list outline">
+    <li>Item I
+        <ol>
+            <li>Item A
+                <ol>
+                    <li>Item 1
+                        <ol>
+                            <li>Item a</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+</ol>
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>

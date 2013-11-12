@@ -17,7 +17,10 @@ $(document).ready(function(){
                 { 'title': 'Buttons', 'url': 'element_buttons.html' },
                 { 'title': 'Badges', 'url': 'element_badges.html' },
                 { 'title': 'Navigation', 'url': 'element_navigation.html' },
-                { 'title': 'Form', 'url': 'element_form.html' }
+                { 'title': 'Forms', 'url': 'element_form.html' },
+                { 'title': 'Blockquotes', 'url': 'element_blockquotes.html' },
+                { 'title': 'Lists', 'url': 'element_lists.html' },
+                { 'title': 'Tables', 'url': 'element_tables.html' }
         ]},
         { 'title': 'Content Patterns', 'items': [
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
