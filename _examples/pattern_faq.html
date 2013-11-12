@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            .code-target {
+                margin-bottom: 12px;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>FAQ</h1>
+                
+                <article class="margin-top border-top">
+                
+                    <h2>Using an Accordion</h2>
+                    
+                    <h4>With Numbering</h4>
+                
+                    <div class='code-target'>
+
+<ol class="list" data-delayed-effect='accordion'>
+
+    <li>
+        <h6><a data-target="#question-1">What do you want to ask?</a></h6>
+        <div id="question-1">
+            <p>Here an answer to what you asked.</p>
+        </div>
+    </li>
+
+    <li>
+        <h6><a data-target="#question-2">What's another thing you want to ask?</a></h6>
+        <div id="question-2">
+            <p>Here an answer to that second thing.</p>
+        </div>
+    </li>
+
+</ol>
+
+                    </div>
+                    
+                    <h4>Without Numbering</h4>
+                
+                    <div class='code-target'>
+
+<ol class="unstyled list" data-delayed-effect='accordion'>
+
+    <li>
+        <h6><a data-target="#question-3">What do you want to ask?</a></h6>
+        <div id="question-3">
+            <p>Here an answer to what you asked.</p>
+        </div>
+    </li>
+
+    <li>
+        <h6><a data-target="#question-4">What's another thing you want to ask?</a></h6>
+        <div id="question-4">
+            <p>Here an answer to that second thing.</p>
+        </div>
+    </li>
+
+</ol>
+
+                    </div>
+                
+                </article>
+                
+                <article class="margin-top border-top">
+                
+                    <h2>Without an Accordion</h2>
+                    
+                    <h4>With Numbering</h4>
+                
+                    <div class='code-target'>
+
+<ol class="list">
+
+    <li>
+        <h6>What do you want to ask?</h6>
+        <p>Here an answer to what you asked.</p>
+    </li>
+
+    <li>
+        <h6>What's another thing you want to ask?</h6>
+        <p>Here an answer to that second thing.</p>
+    </li>
+
+</ol>
+
+                    </div>
+                    
+                    <h4>Without Numbering</h4>
+                
+                    <div class='code-target'>
+
+<ol class="unstyled list">
+
+    <li>
+        <h6>What do you want to ask?</h6>
+        <p>Here an answer to what you asked.</p>
+    </li>
+
+    <li>
+        <h6>What's another thing you want to ask?</h6>
+        <p>Here an answer to that second thing.</p>
+    </li>
+
+</ol>
+
+                    </div>
+                
+                </article>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                
+                $('ol.list').each(function(){
+                    if($(this).attr('data-delayed-effect')){
+                        $(this).attr('data-effect', $(this).attr('data-delayed-effect'))
+                        $(this).attr('data-delayed-effect', null)
+                    }
+                    makeFormattedSection(this);
+                    $(this).efx();
+                })
+            })
+            
+        </script>
+        
+    </body>
+</html>

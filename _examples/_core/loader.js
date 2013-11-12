@@ -22,7 +22,8 @@ $(document).ready(function(){
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
                 { 'title': 'Grouping Text', 'url': 'pattern_text.html' },
                 { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' },
-                { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' }
+                { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' },
+                { 'title': 'Frequently Asked Questions', 'url': 'pattern_faq.html' }
         ]}
     ];
     
