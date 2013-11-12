@@ -29,6 +29,14 @@
             #example-colors pre {
                 margin-top: 0;
             }
+            dt {
+                font-weight: bold;
+                margin-bottom: 0.25em;
+            }
+            dd {
+                margin: 0 0 0.5em 1em;
+                font-style: italic;
+            }
         </style>
         
     </head>
@@ -51,24 +59,75 @@
                 
                 <h1>Colors</h1>
                 
-                <form class="form">
-                    <div class="control">
-                        <label>Select Color</label>
-                        <select id="i-color">
-                            
-                        </select>
-                    </div>
-                </form>
+                <section>
+                    
+                    <h2>Color Types</h2>
+                    
+                    <h4>Branding Colors</h4>
+                    
+                    <p>A color palette is used in branding to describe the marketing purpose of an element:</p>
+                    <dl>
+                        <dt class="text-primary">primary</dt>
+                        <dd>The most prominent color of the brand. This color is usually featured in site-level elements such as the masthead and footer. It may also be used among a series of buttons to encourage the primary action.</dd>
+                        <dt class="text-secondary">secondary</dt>
+                        <dd>A less prominent core color of the brand. This color is usually used as the background for page-level elements such as a left navigation bar or right search box.</dd>
+                        <dt class="text-tertiary">tertiary</dt>
+                        <dd>An offset color of the brand. This color is usually used as the background of tangentially-related elements such as asides and supporting content. It may also be used for pull outs.</dd>
+                        <dt class="text-neutral">neutral</dt>
+                        <dd>A brand color that carries no prominence connotation or semantic meaning.</dd>
+                        <dt class="text-default">default</dt>
+                        <dd>The default color used for text and borders throughout the site, carrying no particular semantic meaning or prominence.</dd>
+                        <dt class="text-inverse">inverse</dt>
+                        <dd>A color meant to represent the inverse of default, carrying no particular semantic meaning or prominence.</dd>
+                    </dl>
+                    
+                    <h4>Mood Colors</h4>
+                    
+                    <dl>
+                        <dt class="text-success">success</dt>
+                        <dd>Indicates positive content or interactions, such as success messages, online badges and create buttons.</dd>
+                        <dt class="text-warning">warning</dt>
+                        <dd>Indicates potentially negative content or an interaction that may lead to negative outcome.</dd>
+                        <dt class="text-danger">danger</dt>
+                        <dd>Indicates dangerous content or interaction the user should be wary of, such as delete success messages and a delete button.</dd>
+                        <dt class="text-error">error</dt>
+                        <dd>Indicates content about an error, such as a failed operation message.</dd>
+                        <dt class="text-info">info</dt>
+                        <dd>Indicates informational content or interactions, such as a helpful message or a control that presents more info.</dd>
+                        <dt class="text-highlight">highlight</dt>
+                        <dd>Indicates information or interactions that should be highlighted in prominence.</dd>
+                        <dt class="text-important">important</dt>
+                        <dd>Indicates information or interactions that should not be ignored.</dd>
+                        <dt class="text-required">required</dt>
+                        <dd>Indicates information or interactions that must not be ignored, such as a required control.</dd>
+                    </dl>
+                    
+                </section>
                 
-                <div id="example-colors">
-                    <span class="text-primary">Primary Text</span>
-                    <div class="primary">Primary</div>
-                    <div class="primary gradient">Primary Gradient</div>
-                    <div class="primary light">Primary Light</div>
-                    <div class="primary light gradient">Primary Light Gradient</div>
-                    <div class="primary dark">Primary Dark</div>
-                    <div class="primary dark gradient">Primary Dark Gradient</div>
-                </div>
+                <section>
+                
+                    <h2>Color Picker</h2>
+                    
+                    <form class="form">
+                        <div class="control">
+                            <label class="hide-accessible">Select Color</label>
+                            <select id="i-color">
+
+                            </select>
+                        </div>
+                    </form>
+
+                    <div id="example-colors">
+                        <span class="text-primary">Primary Text</span>
+                        <div class="primary">Primary</div>
+                        <div class="primary gradient">Primary Gradient</div>
+                        <div class="primary light">Primary Light</div>
+                        <div class="primary light gradient">Primary Light Gradient</div>
+                        <div class="primary dark">Primary Dark</div>
+                        <div class="primary dark gradient">Primary Dark Gradient</div>
+                    </div>
+                    
+                </section>
                 
             </main>
         </div>
