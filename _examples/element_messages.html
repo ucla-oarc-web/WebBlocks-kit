@@ -99,10 +99,11 @@
                 
                 $control = $controlTemplate.clone();
                 $input = $(document.createElement('select')).attr('name','color').addClass('large').append('<option></option>');
-                $control.find('label').html('Content');
+                $control.find('label').html('Color');
                 $.each(Color.COLORS, function(){ $input.append('<option>'+this+'</option>') })
                 $control.append($input);
                 labelInput($control);
+                $control.append($(document.createElement('em')).addClass('text-neutral').html('See <a href="foundation_colors.html" target="_blank">Foundation: Colors</a> for more details'))
                 $form.append($control);
                 
                 $form.find('input,textarea,select').change(function(){
