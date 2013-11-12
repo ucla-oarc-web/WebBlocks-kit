@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            main.site figure section {
+                margin-bottom: inherit;
+            }
+            main.site > article {
+                margin: 20px 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Form</h1>
+                
+                <article>
+                    
+                    <h2>Basic Form</h2>
+                    
+                    <div class="code-target">
+<form class="form">
+    <div class='control'>
+        <label for='input1'>Input 1 Label</label>
+        <input id='input' type='text'>
+    </div>
+    <div class='control'>
+        <label for='input2'>Input 2 Label</label>
+        <input id='input' type='text'>
+    </div>
+    <div class='control'>
+        <label id='radioset'>Radio Label</label>
+        <label>
+            <input type="radio" aria-labelledby="radioset"> 
+            first radio
+        </label>
+        <label>
+            <input type="radio" aria-labelledby="radioset"> 
+            second radio
+        </label>
+    </div>
+    <div class='control'>
+        <label id='checkset'>Checkbox Label</label>
+        <label>
+            <input type="checkbox" aria-labelledby="checkset"> 
+            first radio
+        </label>
+        <label>
+            <input type="checkbox" aria-labelledby="checkset"> 
+            second radio
+        </label>
+    </div>
+    <div class='control'>
+        <input type='submit' class='button'>
+    </div>
+</form>
+                    </div>
+                    
+                    <h4>Horizontal Variant</h4>
+                    
+                    <div class="code-target">
+<form class="horizontal form">
+    <div class='control'>
+        <label for='horizontal-input1'>Input 1 Label</label>
+        <input id='horizontal-input1' type='text'>
+    </div>
+    <div class='control'>
+        <label for='horizontal-input2'>Input 2 Label</label>
+        <input id='horizontal-input2' type='text'>
+    </div>
+    <div class='control'>
+        <label id='horizontal-radioset'>Radio Label</label>
+        <label>
+            <input type="radio" aria-labelledby="horizontal-radioset"> 
+            first radio
+        </label>
+        <label>
+            <input type="radio" aria-labelledby="horizontal-radioset"> 
+            second radio
+        </label>
+    </div>
+    <div class='control'>
+        <label id='horizontal-checkset'>Checkbox Label</label>
+        <label>
+            <input type="checkbox" aria-labelledby="horizontal-checkset"> 
+            first radio
+        </label>
+        <label>
+            <input type="checkbox" aria-labelledby="horizontal-checkset"> 
+            second radio
+        </label>
+    </div>
+    <div class='control'>
+        <input type='submit' class='button'>
+    </div>
+</form>
+                    </div>
+                    
+                </article>
+                
+                <article>
+                    
+                    <h2>Form Control Examples</h2>
+                    
+                    <p><em>NOTE: While these examples include the <strong>form</strong> element as a wrapper (as it's needed for previewing elements), when copying these examples, the controls should be copied directly into a single form. Additionally, they neglect the for/id pairing between a label and its input, but these must be provided for accessibility purposes under actual use.</em></p>
+                    
+                    <article>
+                        
+                        <h3>Input Sizes</h3>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Mini Input</label>
+        <input type='text' class='mini'>
+    </div>
+    <div class='control'>
+        <label>Mini Select</label>
+        <select class='mini'></select>
+    </div>
+</form>
+                        </div>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Small Input</label>
+        <input type='text' class='small'>
+    </div>
+    <div class='control'>
+        <label>Small Select</label>
+        <select class='small'></select>
+    </div>
+</form>
+                        </div>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Large Input</label>
+        <input type='text' class='large'>
+    </div>
+    <div class='control'>
+        <label>Large Select</label>
+        <select class='large'></select>
+    </div>
+    <div class='control'>
+        <label>Large Textarea</label>
+        <textarea class='large'></textarea>
+    </div>
+</form>
+                        </div>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Full-width Input</label>
+        <input type='text' class='full'>
+    </div>
+    <div class='control'>
+        <label>Full-width Select</label>
+        <select class='full'></select>
+    </div>
+    <div class='control'>
+        <label>Full-width Textarea</label>
+        <textarea class='full'></textarea>
+    </div>
+</form>
+                        </div>
+                        
+                    </article>
+                    
+                    <article>
+                        
+                        <h3>Inline Checkboxes</h3>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Label</label>
+        <div class="inline">
+            <label>
+                <input type="radio"> 
+                Sub-label
+            </label>
+            <label>
+                <input type="radio"> 
+                Sub-label
+            </label>
+        </div>
+    </div>
+    <div class='control'>
+        <label>Label</label>
+        <div class="inline">
+            <label>
+                <input type="checkbox"> 
+                Sub-label
+            </label>
+            <label>
+                <input type="checkbox"> 
+                Sub-label
+            </label>
+        </div>
+    </div>
+</form>
+                        </div>
+                        
+                    </article>
+                    
+                    <article>
+                        
+                        <h3>Help Text</h3>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Input</label>
+        <input type='text'>
+        <span>Text to the right of input</span>
+    </div>
+    <div class='control'>
+        <label>Label</label>
+        <select></select>
+        <span>Text to the right of select</span>
+    </div>
+</form>
+                        </div>
+                        
+                        <div class='code-target'>
+<form class="form">
+    <div class='control'>
+        <label>Input</label>
+        <input type='text'>
+        <p>Text below input</p>
+    </div>
+    <div class='control'>
+        <label>Label</label>
+        <select></select>
+        <p>Text below select</p>
+    </div>
+    <div class='control'>
+        <label>Label</label>
+        <textarea></textarea>
+        <p>Text below textarea</p>
+    </div>
+</form>
+                        </div>
+                        
+                    </article>
+                    
+                </article>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+            })
+        </script>
+        
+        
+    </body>
+</html>
