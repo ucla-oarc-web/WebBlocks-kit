@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                margin: 10px;
+                padding: 10px;
+            }
+            .code-target {
+                margin-bottom: 36px;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>Tabbed Sections</h1>
+                
+                <div class='code-target'>
+                
+<div data-delayed-effect='tabs'>
+
+    <nav class='tabs'>
+        <h1>Optional Title</h1>
+        <ul>
+            <li><a data-target='#tab-1'>Tab 1</a></li>
+            <li><a data-target='#tab-2'>Tab 2</a></li>
+        </ul>
+    </nav>
+
+    <section id='tab-1' data-tabs='show'>
+        <h2>First Tab</h2>
+        <p>This is content for the first tab</p>
+    </section>
+
+    <section id='tab-2'>
+        <h2>Second Tab</h2>
+        <p>This is content for the second tab</p>
+    </section>
+
+</div>
+                    
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                
+                $('[data-delayed-effect]').each(function(){
+                    $(this).attr('data-effect', $(this).attr('data-delayed-effect'))
+                    $(this).attr('data-delayed-effect', null)
+                    makeFormattedSection(this);
+                    $(this).efx();
+                })
+            })
+            
+        </script>
+        
+    </body>
+</html>

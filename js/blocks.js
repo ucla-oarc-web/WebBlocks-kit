@@ -2134,6 +2134,7 @@ $(function () {
         return that;
     }
 })(jQuery, window, document);
+$('[data-effect]').efx();
 $(document).addBlocksMethod('processFormRequired', function(){
                 
     var markControls = function(){

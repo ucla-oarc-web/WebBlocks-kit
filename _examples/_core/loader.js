@@ -18,7 +18,8 @@ $(document).ready(function(){
         { 'title': 'Patterns', 'items': [
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
                 { 'title': 'Grouping Text', 'url': 'pattern_text.html' },
-                { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' }
+                { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' },
+                { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' }
         ]},
         { 'title': 'Foundation', 'items': [
                 { 'title': 'Colors', 'url': 'foundation_colors.html' },
