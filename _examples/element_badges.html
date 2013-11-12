@@ -59,6 +59,15 @@
                                     <option></option>
                                 </select>
                             </div>
+                            
+                            <div class="control">
+                                <label>Variant</label>
+                                <select id="i-variant">
+                                    <option></option>
+                                    <option>round</option>
+                                    <option>square</option>
+                                </select>
+                            </div>
 
                         </form>
                         
@@ -76,7 +85,7 @@
                     makeFormattedSection(this);
                 })
                 
-                var $text = $('#i-text'), $color = $('#i-color');
+                var $text = $('#i-text'), $color = $('#i-color'), $variant = $('#i-variant');
                 
                 $.each(WebBlocks.Blocks.Color.COLORS, function(){ $color.append('<option>'+this+'</option>') });
                 
@@ -90,6 +99,15 @@
                 $color.change(function(){
                     var $eles = $('main.site').find('.badge')
                     $.each(WebBlocks.Blocks.Color.COLORS, function(){ $eles.removeClass(this.toString()) });
+                    $eles.addClass($(this).val())
+                    $('main.site').find('.badge').each(function(){
+                        updateFormattedSectionCode($(this).closest('section'))
+                    });
+                })
+                
+                $variant.change(function(){
+                    var $eles = $('main.site').find('.badge')
+                    $.each(['square','round'], function(){ $eles.removeClass(this.toString()) });
                     $eles.addClass($(this).val())
                     $('main.site').find('.badge').each(function(){
                         updateFormattedSectionCode($(this).closest('section'))
