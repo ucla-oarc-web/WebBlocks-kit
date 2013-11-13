@@ -13,7 +13,13 @@
 {
     display: none;
 }
-/**************************************************************************** Branding Colors */
+/**************************************************************************** Typography Settings */
+/**************************************************************************** Utility Settings */
+/**************************************************************************** UCLA Base Colors (from Style Guide) */
+/**************************************************************************** Base Color Definitions */
+/**************************************************************************** Generic Generator Definitions */
+/**************************************************************************** Specific Generator Definitions */
+/**************************************************************************** Specific Computed Color Definitions */
 /****************************************************************************  Breakpoints  */
 /* 360px is iPhone vertical */
 /* 480px is iPhone horizontal */
@@ -103,6 +109,9 @@ form.form .control[data-required="true"]:not(.required) .required-fail, form.for
 form.form .control[data-required="true"].required .required-pass, form.form .control[data-required="true"] .required-pass:not([data-required="ready"]) { display: none; }
 /* line 10, ../../../../extension/blocks/form/_required.scss */
 form.form:not(.form-required-failure) .form-required-fail { display: none; }
+
+/* line 9, ../../../../extension/blocks/form/_sizes.scss */
+form.form label, form.form button, form.form select, form.form textarea, form.form input .uneditable-input { font-size: 1em !important; }
 
 /* line 2, ../../../../extension/blocks/message/_border-radius.scss */
 body .message { border-radius: 0px; }
@@ -288,10 +297,81 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
   /* line 128, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
 
+/* line 5, ../../../../extension/ucla/pattern/_article-list.scss */
+.article.list > article:not(:last-child) { margin-bottom: 16px; }
+/* line 18, ../../../../extension/ucla/pattern/_article-list.scss */
+.article.list.summary > article h1, .article.list.summary > article h2, .article.list.summary > article h3, .article.list.summary > article h4, .article.list.summary > article h5, .article.list.summary > article h6, .article.list.summary > article p { margin: 0 0 4px; }
+
 /* line 3, ../../../../extension/ucla/pattern/_quicklinks.scss */
 .quicklinks > figure { text-align: center; }
 /* line 7, ../../../../extension/ucla/pattern/_quicklinks.scss */
 .quicklinks > figure > figcaption { margin-bottom: 10px; }
+
+/* line 1, ../../../../extension/ucla/utility/_border.scss */
+.border-top { border-top: 1px solid #b3b3b3; padding-top: 10px; }
+
+/* line 6, ../../../../extension/ucla/utility/_border.scss */
+.border-bottom { border-bottom: 1px solid #b3b3b3; padding-bottom: 10px; }
+
+/* line 11, ../../../../extension/ucla/utility/_border.scss */
+.border-strong { border-width: 3px; }
+
+/* line 15, ../../../../extension/ucla/utility/_border.scss */
+.border-primary { border-color: #66b3ff; }
+
+/* line 19, ../../../../extension/ucla/utility/_border.scss */
+.border-secondary { border-color: #96b8cf; }
+
+/* line 23, ../../../../extension/ucla/utility/_border.scss */
+.border-tertiary { border-color: #ffd166; }
+
+/* line 27, ../../../../extension/ucla/utility/_border.scss */
+.border-neutral { border-color: #b3b3b3; }
+
+/* line 31, ../../../../extension/ucla/utility/_border.scss */
+.border-default { border-color: #b3b3b3; }
+
+/* line 1, ../../../../extension/ucla/utility/_inner-container.scss */
+[class*="panel-"] > .inner-container { padding: 10px; }
+
+/* line 1, ../../../../extension/ucla/utility/_ir.scss */
+.ir.logo { background-image: url("../img/site/logo.png"); width: 144px; height: 46px; }
+
+/* line 1, ../../../../extension/ucla/utility/_margin.scss */
+.margin-bottom, .panels-margin-bottom > [class*="panel-"] { margin-bottom: 10px; }
+
+/* line 5, ../../../../extension/ucla/utility/_margin.scss */
+.margin-top, .panels-margin-top > [class*="panel-"] { margin-top: 10px; }
+
+/* line 9, ../../../../extension/ucla/utility/_margin.scss */
+.margin-top.border-top { margin-top: 16px; padding-top: 20px; }
+
+/* line 14, ../../../../extension/ucla/utility/_margin.scss */
+.margin-bottom.border-bottom { margin-bottom: 20px; padding-bottom: 16px; }
+
+/* line 1, ../../../../extension/ucla/utility/_text.scss */
+h1 .text-small, h1 .article.list > article > footer { font-size: 0.6em; }
+
+/* line 5, ../../../../extension/ucla/utility/_text.scss */
+h2 .text-small, h2 .article.list > article > footer { font-size: 0.65em; }
+
+/* line 9, ../../../../extension/ucla/utility/_text.scss */
+h3 .text-small, h3 .article.list > article > footer { font-size: 0.7em; }
+
+/* line 13, ../../../../extension/ucla/utility/_text.scss */
+h4 .text-small, h4 .article.list > article > footer { font-size: 0.8em; }
+
+/* line 17, ../../../../extension/ucla/utility/_text.scss */
+h5 .text-small, h5 .article.list > article > footer { font-size: 0.9em; }
+
+/* line 21, ../../../../extension/ucla/utility/_text.scss */
+h6 .text-small, h6 .article.list > article > footer { font-size: 0.9em; }
+
+/* line 25, ../../../../extension/ucla/utility/_text.scss */
+.text-small, .article.list > article > footer { font-size: 0.85em; }
+
+/* line 1, ../../../../extension/ucla/utility/_to-more.scss */
+.to-more:after { content: " ...\00BB"; }
 
 /* line 5, ../../../src/core/definitions/base/color/branding/_background_light.scss */
 .light.default, .light.badge, .badge.message, .default.message, a.message.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), button.message.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.message[type="button"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.message[type="reset"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.message[type="submit"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), nav.message.bar:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), a.light.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), button.light.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.light[type="button"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.light[type="reset"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.light[type="submit"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), nav.light.bar:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), .fade.default, .fade.badge, a.fade.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), button.fade.button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.fade[type="button"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.fade[type="reset"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), input.fade[type="submit"].button:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required), nav.fade.bar:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.important):not(.success):not(.warning):not(.error):not(.danger):not(.inverse):not(.highlight):not(.required) { color: #2f2f2f; background-color: whitesmoke; border-color: #b3b3b3; text-shadow: none; }
@@ -468,7 +548,7 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
 .text-tertiary { color: #b37d00; }
 
 /* line 17, ../../../src/core/definitions/base/color/branding/_text.scss */
-.text-neutral { color: #595959; }
+.text-neutral, .article.list > article > footer { color: #999999; }
 
 /* line 1, ../../../src/core/definitions/base/color/mood/_text.scss */
 .text-info { color: #0081b3; }
@@ -1092,7 +1172,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .text-justify { text-align: justify; }
 
 /* line 3, ../../../src/core/adapter/base/type/_font.scss */
-body { font-family: "Proxima Nova", "OpenSans", sans-serif; font-size: 0.93em; }
+body { font-family: "Proxima Nova", "OpenSans", sans-serif; font-size: 0.85em; }
 
 /* line 8, ../../../src/core/adapter/base/type/_font.scss */
 h1, h2, h3, h4, h5, h6 { margin: 16px 0 12px; font-weight: bold; line-height: 1; text-rendering: optimizelegibility; }
@@ -1108,27 +1188,27 @@ p, li, address, blockquote { line-height: 1.4; }
 p, address, blockquote { margin: 0 0 10px; }
 
 /* line 34, ../../../src/core/adapter/base/type/_font.scss */
-h1 { font-size: 2.4em; }
+h1 { font-size: 2.6em; }
 /* line 36, ../../../src/core/adapter/base/type/_font.scss */
 h1 small, h1 .blockquote > cite, h1 .blockquote > figcaption { font-size: 0.6em; }
 
 /* line 41, ../../../src/core/adapter/base/type/_font.scss */
-h2 { font-size: 1.75em; }
+h2 { font-size: 1.9em; }
 /* line 43, ../../../src/core/adapter/base/type/_font.scss */
 h2 small, h2 .blockquote > cite, h2 .blockquote > figcaption { font-size: 0.65em; }
 
 /* line 48, ../../../src/core/adapter/base/type/_font.scss */
-h3 { font-size: 1.4em; }
+h3 { font-size: 1.5em; }
 /* line 50, ../../../src/core/adapter/base/type/_font.scss */
 h3 small, h3 .blockquote > cite, h3 .blockquote > figcaption { font-size: 0.7em; }
 
 /* line 55, ../../../src/core/adapter/base/type/_font.scss */
-h4 { font-size: 1.2em; }
+h4 { font-size: 1.3em; }
 /* line 57, ../../../src/core/adapter/base/type/_font.scss */
 h4 small, h4 .blockquote > cite, h4 .blockquote > figcaption { font-size: 0.8em; }
 
 /* line 62, ../../../src/core/adapter/base/type/_font.scss */
-h5 { font-size: 1.1em; }
+h5 { font-size: 1.15em; }
 /* line 64, ../../../src/core/adapter/base/type/_font.scss */
 h5 small, h5 .blockquote > cite, h5 .blockquote > figcaption { font-size: 0.9em; }
 
@@ -1403,7 +1483,7 @@ blockquote { margin: 0 0 0 0.3em; padding: 0 0 0 15px; border-left: 5px solid #e
 /* line 7, ../../../src/core/adapter/entity/_form.scss */
 form.form label, form.form legend { font-weight: bold; display: block; }
 /* line 12, ../../../src/core/adapter/entity/_form.scss */
-form.form legend { width: 100%; padding: 0; margin-bottom: 20px; font-size: 1.395em; line-height: 40px; color: #2f2f2f; border: 0; border-bottom: 1px solid #fcfcfc; }
+form.form legend { width: 100%; padding: 0; margin-bottom: 20px; font-size: 1.275em; line-height: 40px; color: #2f2f2f; border: 0; border-bottom: 1px solid #fcfcfc; }
 /* line 23, ../../../src/core/adapter/entity/_form.scss */
 form.form legend small, form.form legend .blockquote > cite, form.form legend .blockquote > figcaption { color: #666666; }
 /* line 29, ../../../src/core/adapter/entity/_form.scss */
@@ -1411,13 +1491,13 @@ form.form legend + div.control { padding-top: 20px; }
 /* line 33, ../../../src/core/adapter/entity/_form.scss */
 form.form fieldset { padding: 0; margin: 0; border: 0; }
 /* line 43, ../../../src/core/adapter/entity/_form.scss */
-form.form label, form.form input, form.form button, form.form select, form.form textarea { font-size: 0.93em; line-height: 1.4; }
+form.form label, form.form input, form.form button, form.form select, form.form textarea { font-size: 0.85em; line-height: 1.4; }
 /* line 51, ../../../src/core/adapter/entity/_form.scss */
 form.form input, form.form button, form.form select, form.form textarea { font-weight: normal; font-family: "Proxima Nova", "OpenSans", sans-serif; }
 /* line 56, ../../../src/core/adapter/entity/_form.scss */
 form.form label { margin: 0 0 10px; }
 /* line 76, ../../../src/core/adapter/entity/_form.scss */
-form.form select, form.form textarea, form.form input[type="text"], form.form input[type="password"], form.form input[type="datetime"], form.form input[type="datetime-local"], form.form input[type="date"], form.form input[type="month"], form.form input[type="time"], form.form input[type="week"], form.form input[type="number"], form.form input[type="email"], form.form input[type="url"], form.form input[type="search"], form.form input[type="tel"], form.form input[type="color"], form.form .uneditable-input { display: inline-block; height: 1.4; padding: 4px 6px; margin-bottom: 10px; font-size: 0.93em; line-height: 1.4; color: #2f2f2f; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+form.form select, form.form textarea, form.form input[type="text"], form.form input[type="password"], form.form input[type="datetime"], form.form input[type="datetime-local"], form.form input[type="date"], form.form input[type="month"], form.form input[type="time"], form.form input[type="week"], form.form input[type="number"], form.form input[type="email"], form.form input[type="url"], form.form input[type="search"], form.form input[type="tel"], form.form input[type="color"], form.form .uneditable-input { display: inline-block; height: 1.4; padding: 4px 6px; margin-bottom: 10px; font-size: 0.85em; line-height: 1.4; color: #2f2f2f; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 /* line 89, ../../../src/core/adapter/entity/_form.scss */
 form.form input, form.form textarea, form.form .uneditable-input { width: 210px; }
 /* line 93, ../../../src/core/adapter/entity/_form.scss */
@@ -2130,11 +2210,11 @@ form.form div.control.tertiary label, form.form li.control.tertiary label { colo
 /* line 43, ../../../src/core/adapter/entity/form/control/_branding.scss */
 form.form div.control.tertiary input, form.form div.control.tertiary select, form.form div.control.tertiary textarea, form.form li.control.tertiary input, form.form li.control.tertiary select, form.form li.control.tertiary textarea { border-color: #b37d00; }
 /* line 27, ../../../src/core/definitions/entity/form/control/_branding.scss */
-form.form div.control.neutral, form.form li.control.neutral { color: #595959; }
+form.form div.control.neutral, form.form li.control.neutral { color: #999999; }
 /* line 50, ../../../src/core/adapter/entity/form/control/_branding.scss */
-form.form div.control.neutral label, form.form li.control.neutral label { color: #595959; }
+form.form div.control.neutral label, form.form li.control.neutral label { color: #999999; }
 /* line 53, ../../../src/core/adapter/entity/form/control/_branding.scss */
-form.form div.control.neutral input, form.form div.control.neutral select, form.form div.control.neutral textarea, form.form li.control.neutral input, form.form li.control.neutral select, form.form li.control.neutral textarea { border-color: #595959; }
+form.form div.control.neutral input, form.form div.control.neutral select, form.form div.control.neutral textarea, form.form li.control.neutral input, form.form li.control.neutral select, form.form li.control.neutral textarea { border-color: #999999; }
 
 /* line 10, ../../../src/core/definitions/entity/form/control/_mood.scss */
 form.form div.control.info, form.form div.control.important, form.form div.control.success, form.form div.control.warning, form.form div.control.danger, form.form div.control.inverse, form.form div.control.highlight, form.form div.control.required, form.form li.control.info, form.form li.control.important, form.form li.control.success, form.form li.control.warning, form.form li.control.danger, form.form li.control.inverse, form.form li.control.highlight, form.form li.control.required { background-image: none; background-color: transparent; text-shadow: none; border-color: transparent; }
@@ -2330,6 +2410,9 @@ site.main > h1 { text-transform: uppercase; }
 /* line 8, ../../../../sass/includes/site/main/_basic.scss */
 .message h1, .message h2, .message h3, .message h4, .message h5, .message h6, nav.list h1, nav.list h2, nav.list h3, nav.list h4, nav.list h5, nav.list h6, nav.search h1, nav.search h2, nav.search h3, nav.search h4, nav.search h5, nav.search h6, nav.tabs h1, nav.tabs h2, nav.tabs h3, nav.tabs h4, nav.tabs h5, nav.tabs h6, nav.bar h1, nav.bar h2, nav.bar h3, nav.bar h4, nav.bar h5, nav.bar h6 { color: inherit; }
 
+/* line 13, ../../../../sass/includes/site/main/_basic.scss */
+header.condensed > *:not(:last-child), footer.condensed > *:not(:last-child) { margin-bottom: 0; }
+
 /* line 1, ../../../../sass/includes/site/_.audience.scss */
 .site.audience { font-size: 0.8em; overflow: auto; padding: 0.4em 0; }
 /* line 5, ../../../../sass/includes/site/_.audience.scss */
@@ -2339,68 +2422,5 @@ site.main > h1 { text-transform: uppercase; }
 /* line 11, ../../../../sass/includes/site/_.audience.scss */
 .site.audience a:hover { text-decoration: underline; }
 
-/* line 1, ../../../../sass/includes/utility/_ir.scss */
-.ir.logo { background-image: url("../img/site/logo.png"); width: 144px; height: 46px; }
-
 /* line 1, ../../../../sass/includes/utility/_container.scss */
 .container.main { background-color: white; }
-
-/* line 1, ../../../../sass/includes/utility/_inner-container.scss */
-[class*="panel-"] > .inner-container { padding: 10px; }
-
-/* line 1, ../../../../sass/includes/utility/_margin.scss */
-.margin-bottom, .panels-margin-bottom > [class*="panel-"] { margin-bottom: 10px; }
-
-/* line 5, ../../../../sass/includes/utility/_margin.scss */
-.margin-top, .panels-margin-top > [class*="panel-"] { margin-top: 10px; }
-
-/* line 9, ../../../../sass/includes/utility/_margin.scss */
-.margin-top.border-top { margin-top: 16px; padding-top: 20px; }
-
-/* line 14, ../../../../sass/includes/utility/_margin.scss */
-.margin-bottom.border-bottom { margin-bottom: 20px; padding-bottom: 16px; }
-
-/* line 1, ../../../../sass/includes/utility/_text.scss */
-h1 .text-small { font-size: 0.6em; }
-
-/* line 5, ../../../../sass/includes/utility/_text.scss */
-h2 .text-small { font-size: 0.65em; }
-
-/* line 9, ../../../../sass/includes/utility/_text.scss */
-h3 .text-small { font-size: 0.7em; }
-
-/* line 13, ../../../../sass/includes/utility/_text.scss */
-h4 .text-small { font-size: 0.8em; }
-
-/* line 17, ../../../../sass/includes/utility/_text.scss */
-h5 .text-small { font-size: 0.9em; }
-
-/* line 21, ../../../../sass/includes/utility/_text.scss */
-h6 .text-small { font-size: 0.9em; }
-
-/* line 25, ../../../../sass/includes/utility/_text.scss */
-.text-small { font-size: 0.85em; }
-
-/* line 1, ../../../../sass/includes/utility/_border.scss */
-.border-top { border-top: 1px solid #b3b3b3; padding-top: 10px; }
-
-/* line 6, ../../../../sass/includes/utility/_border.scss */
-.border-bottom { border-bottom: 1px solid #b3b3b3; padding-bottom: 10px; }
-
-/* line 11, ../../../../sass/includes/utility/_border.scss */
-.border-strong { border-width: 3px; }
-
-/* line 15, ../../../../sass/includes/utility/_border.scss */
-.border-primary { border-color: #66b3ff; }
-
-/* line 19, ../../../../sass/includes/utility/_border.scss */
-.border-secondary { border-color: #96b8cf; }
-
-/* line 23, ../../../../sass/includes/utility/_border.scss */
-.border-tertiary { border-color: #ffd166; }
-
-/* line 27, ../../../../sass/includes/utility/_border.scss */
-.border-neutral { border-color: #b3b3b3; }
-
-/* line 31, ../../../../sass/includes/utility/_border.scss */
-.border-default { border-color: #b3b3b3; }

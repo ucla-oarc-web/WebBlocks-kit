@@ -27,7 +27,8 @@ $(document).ready(function(){
                 { 'title': 'Grouping Text', 'url': 'pattern_text.html' },
                 { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' },
                 { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' },
-                { 'title': 'Frequently Asked Questions', 'url': 'pattern_faq.html' }
+                { 'title': 'Frequently Asked Questions', 'url': 'pattern_faq.html' },
+                { 'title': 'News &amp; Events List', 'url': 'pattern_news_events_list.html' }
         ]}
     ];
     
