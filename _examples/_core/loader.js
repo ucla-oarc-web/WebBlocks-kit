@@ -23,13 +23,12 @@ $(document).ready(function(){
                 { 'title': 'Tables', 'url': 'element_tables.html' }
         ]},
         { 'title': 'Content Patterns', 'items': [
-                { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
-                { 'title': 'Content Grids', 'url': 'pattern_grids.html' },
                 { 'title': 'Grouping Text', 'url': 'pattern_text.html' },
                 { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' },
                 { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' },
                 { 'title': 'Frequently Asked Questions', 'url': 'pattern_faq.html' },
-                { 'title': 'News &amp; Events List', 'url': 'pattern_news_events_list.html' }
+                { 'title': 'News &amp; Events Set', 'url': 'pattern_news_events_set.html' },
+                { 'title': 'Link Set', 'url': 'pattern_link_set.html' }
         ]}
     ];
     

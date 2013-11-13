@@ -297,17 +297,26 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
   /* line 128, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
 
-/* line 5, ../../../../extension/ucla/pattern/_article-list.scss */
-.article.list > article:not(:last-child) { margin-bottom: 16px; }
-/* line 14, ../../../../extension/ucla/pattern/_article-list.scss */
-.article.list footer small, .article.list footer .blockquote > cite, .article.list footer .blockquote > figcaption { font-size: 1em; }
-/* line 21, ../../../../extension/ucla/pattern/_article-list.scss */
-.article.list.summary > article h1, .article.list.summary > article h2, .article.list.summary > article h3, .article.list.summary > article h4, .article.list.summary > article h5, .article.list.summary > article h6, .article.list.summary > article p { margin: 0 0 4px; }
-
 /* line 3, ../../../../extension/ucla/pattern/_quicklinks.scss */
 .quicklinks > figure { text-align: center; }
 /* line 7, ../../../../extension/ucla/pattern/_quicklinks.scss */
 .quicklinks > figure > figcaption { margin-bottom: 10px; }
+
+/* line 5, ../../../../extension/ucla/pattern/set/_article.scss */
+.article.set > article:not(:last-child) { margin-bottom: 16px; }
+/* line 14, ../../../../extension/ucla/pattern/set/_article.scss */
+.article.set footer small, .article.set footer .blockquote > cite, .article.set footer .blockquote > figcaption { font-size: 1em; }
+/* line 21, ../../../../extension/ucla/pattern/set/_article.scss */
+.article.set.summary > article h1, .article.set.summary > article h2, .article.set.summary > article h3, .article.set.summary > article h4, .article.set.summary > article h5, .article.set.summary > article h6, .article.set.summary > article p { margin: 0 0 4px; }
+
+/* line 9, ../../../../extension/ucla/pattern/set/_link.scss */
+.link.set > ul > li:not(:last-child) { margin-bottom: 16px; }
+/* line 13, ../../../../extension/ucla/pattern/set/_link.scss */
+.link.set > ul > li a { font-weight: bold; }
+/* line 15, ../../../../extension/ucla/pattern/set/_link.scss */
+.link.set > ul > li a small, .link.set > ul > li a .blockquote > cite, .link.set > ul > li a .blockquote > figcaption { font-weight: normal; text-decoration: none; }
+/* line 28, ../../../../extension/ucla/pattern/set/_link.scss */
+.link.set footer small, .link.set footer .blockquote > cite, .link.set footer .blockquote > figcaption { font-size: 1em; }
 
 /* line 1, ../../../../extension/ucla/utility/_border.scss */
 .border-top { border-top: 1px solid #b3b3b3; padding-top: 10px; }
@@ -352,25 +361,25 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
 .margin-bottom.border-bottom { margin-bottom: 20px; padding-bottom: 16px; }
 
 /* line 1, ../../../../extension/ucla/utility/_text.scss */
-h1 .text-small, h1 .article.list footer, .article.list h1 footer { font-size: 0.6em; }
+h1 .text-small, h1 .article.set footer, .article.set h1 footer, h1 .link.set footer, .link.set h1 footer { font-size: 0.6em; }
 
 /* line 5, ../../../../extension/ucla/utility/_text.scss */
-h2 .text-small, h2 .article.list footer, .article.list h2 footer { font-size: 0.65em; }
+h2 .text-small, h2 .article.set footer, .article.set h2 footer, h2 .link.set footer, .link.set h2 footer { font-size: 0.65em; }
 
 /* line 9, ../../../../extension/ucla/utility/_text.scss */
-h3 .text-small, h3 .article.list footer, .article.list h3 footer { font-size: 0.7em; }
+h3 .text-small, h3 .article.set footer, .article.set h3 footer, h3 .link.set footer, .link.set h3 footer { font-size: 0.7em; }
 
 /* line 13, ../../../../extension/ucla/utility/_text.scss */
-h4 .text-small, h4 .article.list footer, .article.list h4 footer { font-size: 0.8em; }
+h4 .text-small, h4 .article.set footer, .article.set h4 footer, h4 .link.set footer, .link.set h4 footer { font-size: 0.8em; }
 
 /* line 17, ../../../../extension/ucla/utility/_text.scss */
-h5 .text-small, h5 .article.list footer, .article.list h5 footer { font-size: 0.9em; }
+h5 .text-small, h5 .article.set footer, .article.set h5 footer, h5 .link.set footer, .link.set h5 footer { font-size: 0.9em; }
 
 /* line 21, ../../../../extension/ucla/utility/_text.scss */
-h6 .text-small, h6 .article.list footer, .article.list h6 footer { font-size: 0.9em; }
+h6 .text-small, h6 .article.set footer, .article.set h6 footer, h6 .link.set footer, .link.set h6 footer { font-size: 0.9em; }
 
 /* line 25, ../../../../extension/ucla/utility/_text.scss */
-.text-small, .article.list footer { font-size: 0.85em; }
+.text-small, .article.set footer, .link.set footer { font-size: 0.85em; }
 
 /* line 1, ../../../../extension/ucla/utility/_to-more.scss */
 .to-more:after { content: " ...\00BB"; }
@@ -550,7 +559,7 @@ h6 .text-small, h6 .article.list footer, .article.list h6 footer { font-size: 0.
 .text-tertiary { color: #b37d00; }
 
 /* line 17, ../../../src/core/definitions/base/color/branding/_text.scss */
-.text-neutral, .article.list footer { color: #999999; }
+.text-neutral, .article.set footer, .link.set footer { color: #999999; }
 
 /* line 1, ../../../src/core/definitions/base/color/mood/_text.scss */
 .text-info { color: #0081b3; }
@@ -1536,7 +1545,7 @@ ul.list { margin-left: 1.5em; padding-left: 0.5em; }
 ul.list ul, ul.list ol { margin-bottom: 0; }
 
 /* line 5, ../../../src/core/definitions/entity/_list.scss */
-ul.unstyled, nav.list ul, ul.list.unstyled, nav.list ul.list { margin-left: 0; padding-left: 0; list-style: none; }
+ul.unstyled, nav.list ul, ul.list.unstyled, .link.set > ul, nav.list ul.list { margin-left: 0; padding-left: 0; list-style: none; }
 
 /* line 9, ../../../src/core/definitions/entity/_list.scss */
 ol.list { margin-left: 1.5em; padding-left: 0.5em; }
@@ -2414,6 +2423,15 @@ site.main > h1 { text-transform: uppercase; }
 
 /* line 13, ../../../../sass/includes/site/main/_basic.scss */
 header.condensed > *:not(:last-child), footer.condensed > *:not(:last-child) { margin-bottom: 0; }
+
+/* line 19, ../../../../sass/includes/site/main/_basic.scss */
+header.site a, footer.site a, nav.bar a, nav.list a, nav.breadcrumb a, .message a { border-bottom: none; }
+
+/* line 24, ../../../../sass/includes/site/main/_basic.scss */
+a { border-bottom: 1px #7299f9 dotted; text-decoration: none; }
+
+/* line 28, ../../../../sass/includes/site/main/_basic.scss */
+a:hover:not(.button) { border-bottom: none; }
 
 /* line 1, ../../../../sass/includes/site/_.audience.scss */
 .site.audience { font-size: 0.8em; overflow: auto; padding: 0.4em 0; }

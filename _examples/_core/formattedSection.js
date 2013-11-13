@@ -23,6 +23,9 @@ var updateFormattedSectionCode = function(element){
         if($(this).attr('aria-labeledby').indexOf('aria-') === 0)
             $(this).attr('aria-labeledby',null)
     })
+    $figureClone.find('[role]').each(function(){
+        $(this).attr('role',null)
+    })
 
     $code.html($figureClone.html().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
     

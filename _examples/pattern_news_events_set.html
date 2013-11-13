@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <title>Site Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/blocks.css">
+        <script type="text/javascript" src="../js/blocks.js"></script>
+        <script type="text/javascript" src="_core/loader.js"></script>
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../css/blocks-ie.css">
+        <script type="text/javascript" src="../js/blocks-ie.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            .code-target > * > figure {
+                border: 1px solid #aaa;
+            }
+            .code-target > * > * {
+                padding: 10px;
+            }
+            .code-target.horizontal pre.prettyprint {
+                margin-top: 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body class="site">
+        
+        <header class="site primary inverted gradient clearfix">
+            <div class="container">
+                <hgroup>
+                    <h1><a href=".." class="ir logo">UCLA</a></h1>
+                    <h2><a href="index.html">WebBlocks Kit Examples</a></h2>
+                </hgroup>
+                <nav class="mega">
+                </nav>
+            </div>
+        </header>
+        
+        <div class="main container">
+            <main class="site">
+                
+                <h1>News &amp; Events Set</h1>
+
+                <div class='code-target horizontal'>
+<section class="article summary set">
+    <h4 class="border-bottom">News &amp; Events</h4>
+    <article>
+        <h6><a href="link/to/article">News Title or Event Name</a></h6>
+        <p>A brief snippet about the article or event.</p>
+        <footer>
+            <p><a href="link/to/article" class="to-more">Read More</a></p>
+        </footer>
+    </article>
+    <article>
+        <h6><a href="link/to/article">News Title or Event Name</a></h6>
+        <p>A brief snippet about the article or event.</p>
+        <footer>
+            <p><a href="link/to/article" class="to-more">Read More</a></p>
+        </footer>
+    </article>
+    <footer>
+        <p><a href="link/to/articles" class="to-more">See All</a></p>
+    </footer>
+</section>
+                </div>
+                
+                <h2>In a Larger Design</h2>
+                
+                <h4>Within a Cluster</h4>
+                
+                <p>When a News &amp; Events list is one of several equal-weighted sections, it fits well within a cluster. This is a common case such as on the front landing page of a site:</p>
+
+                <div class='code-target'>
+<div class="cluster">
+    <section class="article summary set">
+        <h4 class="border-bottom">News &amp; Events</h4>
+        <article>
+            <h6><a href="link/to/article">News Title or Event Name</a></h6>
+            <p>A brief snippet about the article or event.</p>
+            <footer>
+                <p><a href="link/to/article" class="to-more">Read More</a></p>
+            </footer>
+        </article>
+        <article>
+            <h6><a href="link/to/article">News Title or Event Name</a></h6>
+            <p>A brief snippet about the article or event.</p>
+            <footer>
+                <p><a href="link/to/article" class="to-more">Read More</a></p>
+            </footer>
+        </article>
+        <footer>
+            <p><a href="link/to/articles" class="to-more">See All</a></p>
+        </footer>
+    </section>
+    <section>
+        <h4 class="border-bottom">Another Content Section</h4>
+        <p>Some other content might go here</p>
+        <p>And some more...</p>
+        <p>And some more.</p>
+    </section>
+    <section>
+        <h4 class="border-bottom">Another Content Section</h4>
+        <p>Some other content might go here</p>
+        <p>And some more...</p>
+        <p>And some more.</p>
+    </section>
+</div>
+                </div>
+                
+                <h4>As an Aside</h4>
+                
+                <p>Sometimes, a News &amp; Events list may be useful as a supporting list only tangentially related to the main content:</p>
+
+                <div class='code-target'>
+<div class="row">
+    <div class="panel-8">
+        <h2>Primary Page Content</h2>
+        <p>Primary page content goes here...</p>
+        <p>And some more...</p>
+        <p>Ad some more.</p>
+    </div>
+    <aside class="panel-4 article summary set">
+        <h4 class="border-bottom">News &amp; Events</h4>
+        <article>
+            <h6><a href="link/to/article">News Title or Event Name</a></h6>
+            <p>A brief snippet about the article or event.</p>
+            <footer>
+                <p><a href="link/to/article" class="to-more">Read More</a></p>
+            </footer>
+        </article>
+        <article>
+            <h6><a href="link/to/article">News Title or Event Name</a></h6>
+            <p>A brief snippet about the article or event.</p>
+            <footer>
+                <p><a href="link/to/article" class="to-more">Read More</a></p>
+            </footer>
+        </article>
+        <footer>
+            <p><a href="link/to/articles" class="to-more">See All</a></p>
+        </footer>
+    </aside>
+</div>
+                </div>
+                
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $('.code-target > *').each(function(){
+                    makeFormattedSection(this);
+                })
+                $('.code-target.horizontal > section').addClass('row');
+                $('.code-target.horizontal > section > *').first().addClass('panel-4').next().addClass('panel-8');
+            })
+            
+        </script>
+        
+    </body>
+</html>
