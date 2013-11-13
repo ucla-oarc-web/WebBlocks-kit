@@ -8,7 +8,7 @@ $(document).ready(function(){
         { 'title': 'Site Foundation', 'items': [
                 { 'title': 'Site Header', 'url': 'element_site_header.html' },
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
-                { 'title': 'Grids', 'url': 'pattern_grids.html' },
+                { 'title': 'Content Grids', 'url': 'pattern_grids.html' },
                 { 'title': 'Colors', 'url': 'foundation_colors.html' },
                 { 'title': 'Text', 'url': 'foundation_text.html' }
         ]},
@@ -24,6 +24,7 @@ $(document).ready(function(){
         ]},
         { 'title': 'Content Patterns', 'items': [
                 { 'title': 'Site Layouts', 'url': 'pattern_site_layouts.html' },
+                { 'title': 'Content Grids', 'url': 'pattern_grids.html' },
                 { 'title': 'Grouping Text', 'url': 'pattern_text.html' },
                 { 'title': 'Quicklinks Box', 'url': 'pattern_quicklinks.html' },
                 { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' },
