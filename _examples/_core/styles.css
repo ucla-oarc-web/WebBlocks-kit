@@ -11,10 +11,6 @@ pre.prettyprint {
     padding: 5px 10px !important;
 }
 
-main section {
-    margin-bottom: 1em;
-}
-
 main section section:last-child {
     margin-bottom: 0;
 }

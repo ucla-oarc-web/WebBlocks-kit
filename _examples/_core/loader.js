@@ -28,7 +28,11 @@ $(document).ready(function(){
                 { 'title': 'Tabbed Sections', 'url': 'pattern_tabs.html' },
                 { 'title': 'Frequently Asked Questions', 'url': 'pattern_faq.html' },
                 { 'title': 'News &amp; Events Set', 'url': 'pattern_news_events_set.html' },
-                { 'title': 'Link Set', 'url': 'pattern_link_set.html' }
+                { 'title': 'Link Set', 'url': 'pattern_link_set.html' },
+                { 'title': 'Contact Info', 'url': 'pattern_contact_info.html' }
+        ]},
+        { 'title': 'Page Patterns', 'items': [
+                { 'title': 'Default Front Page', 'url': 'pattern_page_front_default.html' }
         ]}
     ];
     

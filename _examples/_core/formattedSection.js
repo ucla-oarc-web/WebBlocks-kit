@@ -26,8 +26,22 @@ var updateFormattedSectionCode = function(element){
     $figureClone.find('[role]').each(function(){
         $(this).attr('role',null)
     })
+    $figureClone.find('[data-element]').each(function(){
+        var attrs = { }, element = $(this).attr('data-element');
+        $.each($(this)[0].attributes, function(idx, attr) {
+            if(attr.nodeName != 'data-element')
+                attrs[attr.nodeName] = attr.nodeValue;
+        });
+        $(this).replaceWith(function () {
+            return $("<"+element+" />", attrs).append($(this).contents());
+        });
+    })
 
-    $code.html($figureClone.html().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+    $code.html($figureClone.html()
+                           .replace(/&/g,'&amp;')
+                           .replace(/</g,'&lt;')
+                           .replace(/>/g,'&gt;')
+                           .replace(/itemscope=""/g, 'itemscope')); // hack because jQuery appends ="" but this is HTML5 bool attr 
     
     if(typeof prettyPrint !== 'undefined')
         prettyPrint();

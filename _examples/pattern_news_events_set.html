@@ -97,18 +97,35 @@
             <p><a href="link/to/articles" class="to-more">See All</a></p>
         </footer>
     </section>
-    <section>
-        <h4 class="border-bottom">Another Content Section</h4>
-        <p>Some other content might go here</p>
-        <p>And some more...</p>
-        <p>And some more.</p>
-    </section>
-    <section>
-        <h4 class="border-bottom">Another Content Section</h4>
-        <p>Some other content might go here</p>
-        <p>And some more...</p>
-        <p>And some more.</p>
-    </section>
+    <nav class='link set'>
+        <h4 class="border-bottom">Link Set Title</h4>
+        <ul>
+            <li><a href='path/to/link'>A first link</a></li>
+            <li><a href='path/to/link'>Another link</small></a></li>
+            <li><a href='path/to/link'>A third link</a></li>
+        </ul>
+        <footer>
+            <p><a href="path/to/link/listing" class="to-more">See All</a></p>
+        </footer>
+    </nav>
+    <address class="microdata" itemscope itemtype='http://schema.org/ContactPoint'>
+        <h4 class="border-bottom">Contact Us</h4>
+        <p>
+            <span itemprop="telephone" class="labeled">(000) 000-0000</span>
+            <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
+            <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
+        </p>
+        <p itemscope itemtype="schema.org/PostalAddress" class="labeled">
+            <span class="fn org" itemprop='name'>Department Name</span>
+            <br><span class="adr">
+                <span itemprop='postOfficeBoxNumber'>Box 000000</span>
+                <br>
+                <span itemprop='addressLocality'>Los Angeles</span>
+                <span itemprop='addressRegion'>CA</span>
+                <span itemprop='postalCode'>90095-1785</span>
+            </span>
+        </p>
+    </address>
 </div>
                 </div>
                 

@@ -44,27 +44,34 @@
         <div class="main container">
             <main class="site">
                 
-                <h1>Link Set</h1>
+                <h1>Contact Info</h1>
                 
                 <div class='code-target horizontal'>
-<nav class='link set'>
-    <h4 class="border-bottom">Link Set Title</h4>
-    <ul>
-        <li><a href='path/to/link'>This is the text for a first link</a></li>
-        <li><a href='path/to/link'>This is another link with a decent amount of text describing it<br><small>And this is some supporting description</small></a></li>
-        <li><a href='path/to/link'>Short link</a></li>
-    </ul>
-    <footer>
-        <p><a href="path/to/link/listing" class="to-more">See All</a></p>
-    </footer>
-</nav>
+<address class="microdata" itemscope itemtype='http://schema.org/ContactPoint'>
+    <h4 class="border-bottom">Contact Us</h4>
+    <p>
+        <span itemprop="telephone" class="labeled">(000) 000-0000</span>
+        <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
+        <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
+    </p>
+    <p itemscope itemtype="schema.org/PostalAddress" class="labeled">
+        <span class="fn org" itemprop='name'>Department Name</span>
+        <br><span class="adr">
+            <span itemprop='postOfficeBoxNumber'>Box 000000</span>
+            <br>
+            <span itemprop='addressLocality'>Los Angeles</span>
+            <span itemprop='addressRegion'>CA</span>
+            <span itemprop='postalCode'>90095-1785</span>
+        </span>
+    </p>
+</address>
                 </div>
                 
                 <h2>In a Larger Design</h2>
                 
                 <h4>Within a Cluster</h4>
                 
-                <p>When a News &amp; Events list is one of several equal-weighted sections, it fits well within a cluster. This is a common case such as on the front landing page of a site:</p>
+                <p>When contact info is one of several equal-weighted sections, it fits well within a cluster. This is a common case such as on the front landing page of a site:</p>
 
                 <div class='code-target'>
 <div class="cluster">
@@ -122,7 +129,7 @@
                 
                 <h4>As a Sidebar</h4>
                 
-                <p>Sometimes, a News &amp; Events list may be useful as a supporting list only tangentially related to the main content:</p>
+                <p>Sometimes, a contact info may be useful as a sidebar:</p>
 
                 <div class='code-target'>
 <div class="row">
@@ -132,17 +139,24 @@
         <p>And some more...</p>
         <p>Ad some more.</p>
     </div>
-    <nav class='panel-4 link set'>
-        <h4 class="border-bottom">Link Set Title</h4>
-        <ul>
-            <li><a href='path/to/link'>A first link</a></li>
-            <li><a href='path/to/link'>Another link</a></li>
-            <li><a href='path/to/link'>A third link</a></li>
-        </ul>
-        <footer>
-            <p><a href="path/to/link/listing" class="to-more">See All</a></p>
-        </footer>
-    </nav>
+    <address class="panel-4 microdata" itemscope itemtype='http://schema.org/ContactPoint'>
+        <h4 class="border-bottom">Contact Us</h4>
+        <p>
+            <span itemprop="telephone" class="labeled">(000) 000-0000</span>
+            <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
+            <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
+        </p>
+        <p itemscope itemtype="schema.org/PostalAddress" class="labeled">
+            <span class="fn org" itemprop='name'>Department Name</span>
+            <br><span class="adr">
+                <span itemprop='postOfficeBoxNumber'>Box 000000</span>
+                <br>
+                <span itemprop='addressLocality'>Los Angeles</span>
+                <span itemprop='addressRegion'>CA</span>
+                <span itemprop='postalCode'>90095-1785</span>
+            </span>
+        </p>
+    </address>
 </div>
                 </div>
                 

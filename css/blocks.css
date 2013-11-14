@@ -297,6 +297,31 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
   /* line 128, ../../../../extension/blocks/structure/_cluster.scss */
   .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
 
+/* line 4, ../../../../extension/ucla/microdata/_microdata.scss */
+.microdata [itemprop="addressLocality"]:not(:last-child):after { content: ', '; }
+/* line 12, ../../../../extension/ucla/microdata/_microdata.scss */
+.microdata .labeled[itemprop]:before { display: inherit; font-weight: bold; }
+/* line 18, ../../../../extension/ucla/microdata/_microdata.scss */
+.microdata .labeled[itemtype*="schema.org/PostalAddress"]:before { content: "Address:"; display: block; font-weight: bold; }
+/* line 24, ../../../../extension/ucla/microdata/_microdata.scss */
+.microdata .labeled[itemprop="telephone"]:before { content: "Phone: "; }
+/* line 28, ../../../../extension/ucla/microdata/_microdata.scss */
+.microdata .labeled[itemprop="faxnumber"]:before { content: "Fax: "; }
+/* line 32, ../../../../extension/ucla/microdata/_microdata.scss */
+.microdata .labeled[itemprop="email"]:before { content: 'Email: '; }
+
+/* line 45, ../../../../extension/ucla/microdata/_microdata.scss */
+.vcard span.locality:not(:last-child):after, .vcard span.region:not(:last-child):after { content: ","; }
+
+/* line 1, ../../../../extension/ucla/pattern/_page.scss */
+.page-title { margin-bottom: 0.75em; }
+
+/* line 8, ../../../../extension/ucla/pattern/_page.scss */
+.page-section { margin-bottom: 1.5em; }
+
+/* line 12, ../../../../extension/ucla/pattern/_page.scss */
+.page-section:last-child { margin-bottom: 0; }
+
 /* line 3, ../../../../extension/ucla/pattern/_quicklinks.scss */
 .quicklinks > figure { text-align: center; }
 /* line 7, ../../../../extension/ucla/pattern/_quicklinks.scss */
@@ -322,7 +347,7 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
 .border-top { border-top: 1px solid #b3b3b3; padding-top: 10px; }
 
 /* line 6, ../../../../extension/ucla/utility/_border.scss */
-.border-bottom { border-bottom: 1px solid #b3b3b3; padding-bottom: 10px; }
+.border-bottom, .page-title { border-bottom: 1px solid #b3b3b3; padding-bottom: 10px; }
 
 /* line 11, ../../../../extension/ucla/utility/_border.scss */
 .border-strong { border-width: 3px; }
@@ -331,7 +356,7 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
 .border-primary { border-color: #66b3ff; }
 
 /* line 19, ../../../../extension/ucla/utility/_border.scss */
-.border-secondary { border-color: #96b8cf; }
+.border-secondary, .page-title { border-color: #96b8cf; }
 
 /* line 23, ../../../../extension/ucla/utility/_border.scss */
 .border-tertiary { border-color: #ffd166; }
@@ -358,7 +383,7 @@ nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-ra
 .margin-top.border-top { margin-top: 16px; padding-top: 20px; }
 
 /* line 14, ../../../../extension/ucla/utility/_margin.scss */
-.margin-bottom.border-bottom { margin-bottom: 20px; padding-bottom: 16px; }
+.margin-bottom.border-bottom, .margin-bottom.page-title { margin-bottom: 20px; padding-bottom: 16px; }
 
 /* line 1, ../../../../extension/ucla/utility/_text.scss */
 h1 .text-small, h1 .article.set footer, .article.set h1 footer, h1 .link.set footer, .link.set h1 footer { font-size: 0.6em; }
@@ -380,6 +405,9 @@ h6 .text-small, h6 .article.set footer, .article.set h6 footer, h6 .link.set foo
 
 /* line 25, ../../../../extension/ucla/utility/_text.scss */
 .text-small, .article.set footer, .link.set footer { font-size: 0.85em; }
+
+/* line 29, ../../../../extension/ucla/utility/_text.scss */
+.text-upper, .page-title { text-transform: uppercase; }
 
 /* line 1, ../../../../extension/ucla/utility/_to-more.scss */
 .to-more:after { content: " ...\00BB"; }
