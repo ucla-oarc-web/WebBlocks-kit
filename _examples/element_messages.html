@@ -39,6 +39,23 @@
         
         <script type="text/javascript">
             
+            var colorsDescriptions = {
+                'success': 'A positive outcome, such as the successful completion of a requested action.',
+                'warning': 'A potentially negative information, such as if a recommended field was not set.',
+                'danger': 'Dangerous information a user should be wary of, such as successfully deleting something.',
+                'error': 'An error, such as when an operation or request fails.',
+                'info': 'Informational content, such as help text.',
+                'highlight': 'Other content a user should be drawn to, such as a notice.',
+                'important': 'Content a user must see, such as a site-wide announcement.',
+                'required': 'Important content regarding a requirement the user must fulfill.',
+                'primary': 'The primary branding color of the site, rarely used for messages.',
+                'secondary': 'The secondary branding color of the site, sometimes used for general messsages.',
+                'tertiary': 'A tertiary branding color for the site, usually used for tangentially-related content.',
+                'neutral': 'A neutral branding tone, used for a message with a neutral connotation.',
+                'default': 'The default color for a message.',
+                'inverse': 'An inverse of the default color for a message.'
+            }
+            
             var createLiveSection = function($factory){
                 var $code = $(document.createElement('pre')).addClass('prettyprint'),
                     $form = $(document.createElement('form')).addClass('form').addClass('horizontal'),
@@ -100,11 +117,17 @@
                 $control = $controlTemplate.clone();
                 $input = $(document.createElement('select')).attr('name','color').addClass('large').append('<option></option>');
                 $control.find('label').html('Color');
-                $.each(Color.COLORS, function(){ $input.append('<option>'+this+'</option>') })
+                $.each(colorsDescriptions, function(k,v){ $input.append('<option>'+k+'</option>') })
                 $control.append($input);
                 labelInput($control);
                 $control.append($(document.createElement('em')).addClass('text-neutral').html('See <a href="foundation_colors.html" target="_blank">Foundation: Colors</a> for more details'))
                 $form.append($control);
+                
+                $form.find('[name="color"]').change(function(){
+                    var val = $(this).val();
+                    $(this).siblings('.description').remove();
+                    $(this).parent().append('<p class="description text-'+val+'" style="font-weight:bold">'+colorsDescriptions[val]+'</p>');
+                })
                 
                 $form.find('input,textarea,select').change(function(){
                     var options = {}
