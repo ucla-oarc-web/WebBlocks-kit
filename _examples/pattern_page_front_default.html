@@ -37,6 +37,20 @@
                 padding: 20px;
                 margin-top: -1em;
             }
+            figure.billboard div[data-element="img"] {
+                height: 200px;
+                width: 100%;
+                background-color: #aaa;
+            }
+            div[data-element="body"].site > header {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            div[data-element="body"].site > .container {
+                margin-left: 1em;
+                margin-right: 1em;
+                width: auto;
+            }
             div[data-element="body"].site {
                 background-image: url('../img/site/background.jpg');
             }
@@ -135,105 +149,115 @@
         </div>
     </header>
     
-    <div class="main container">
-        <div data-element='main' class='site'>
-            
-            <h1 class='page-title'>Page Title</h1>
-            
-            <nav class="quicklinks cluster page-section">
-                <figure>
-                    <img src="path/to/img" alt="First quicklink">
+        
+    <div class="float-container">
+        <div class="main container">
+            <div data-element='main' class='site'>
+
+                <figure class="billboard text-upper">
+                    <div data-element="img" src="path/to/img"></div>
                     <figcaption>
-                        <a href="#">Quicklink #1</a>
+                        This is the caption for a figure where I'm just filling in some text as a test.
                     </figcaption>
                 </figure>
-                <figure>
-                    <img src="path/to/img" alt="Second quicklink">
-                    <figcaption>
-                        <a href="#">Quicklink #2</a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="path/to/img" alt="Third quicklink">
-                    <figcaption>
-                        <a href="#">Quicklink #3</a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="path/to/img" alt="Fourth quicklink">
-                    <figcaption>
-                        <a href="#">Quicklink #4</a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="path/to/img" alt="Fifth quicklink">
-                    <figcaption>
-                        <a href="#">Quicklink #5</a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="path/to/img" alt="Sixth quicklink">
-                    <figcaption>
-                        <a href="#">Quicklink #6</a>
-                    </figcaption>
-                </figure>
-            </nav>
-            
-            <div class="cluster page-section">
-                <section class="article summary set">
-                    <h4 class="border-bottom">News &amp; Events</h4>
-                    <article>
-                        <h6><a href="link/to/article">News Title or Event Name</a></h6>
-                        <p>A brief snippet about the article or event.</p>
-                        <footer>
-                            <p><a href="link/to/article" class="to-more">Read More</a></p>
-                        </footer>
-                    </article>
-                    <article>
-                        <h6><a href="link/to/article">News Title or Event Name</a></h6>
-                        <p>A brief snippet about the article or event.</p>
-                        <footer>
-                            <p><a href="link/to/article" class="to-more">Read More</a></p>
-                        </footer>
-                    </article>
-                    <footer>
-                        <p><a href="link/to/articles" class="to-more">See All</a></p>
-                    </footer>
-                </section>
-                
-                <nav class='link set'>
-                    <h4 class="border-bottom">Link Set Title</h4>
-                    <ul>
-                        <li><a href='path/to/link'>A first link</a></li>
-                        <li><a href='path/to/link'>Another link</small></a></li>
-                        <li><a href='path/to/link'>A third link</a></li>
-                    </ul>
-                    <footer>
-                        <p><a href="path/to/link/listing" class="to-more">See All</a></p>
-                    </footer>
+
+                <h1 class='page-title'>Page Title</h1>
+
+                <nav class="quicklinks cluster page-section">
+                    <figure>
+                        <img src="path/to/img" alt="First quicklink">
+                        <figcaption>
+                            <a href="#">Quicklink #1</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="path/to/img" alt="Second quicklink">
+                        <figcaption>
+                            <a href="#">Quicklink #2</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="path/to/img" alt="Third quicklink">
+                        <figcaption>
+                            <a href="#">Quicklink #3</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="path/to/img" alt="Fourth quicklink">
+                        <figcaption>
+                            <a href="#">Quicklink #4</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="path/to/img" alt="Fifth quicklink">
+                        <figcaption>
+                            <a href="#">Quicklink #5</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="path/to/img" alt="Sixth quicklink">
+                        <figcaption>
+                            <a href="#">Quicklink #6</a>
+                        </figcaption>
+                    </figure>
                 </nav>
-                
-                <address class="microdata" itemscope itemtype='http://schema.org/ContactPoint'>
-                    <h4 class="border-bottom">Contact Us</h4>
-                    <p>
-                        <span itemprop="telephone" class="labeled">(000) 000-0000</span>
-                        <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
-                        <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
-                    </p>
-                    <p itemscope itemtype="schema.org/PostalAddress" class="labeled">
-                        <span class="fn org" itemprop='name'>Department Name</span>
-                        <br><span class="adr">
-                            <span itemprop='postOfficeBoxNumber'>Box 000000</span>
-                            <br>
-                            <span itemprop='addressLocality'>Los Angeles</span>
-                            <span itemprop='addressRegion'>CA</span>
-                            <span itemprop='postalCode'>90095-1785</span>
-                        </span>
-                    </p>
-                </address>
-                
+
+                <div class="cluster page-section">
+                    <section class="article summary set">
+                        <h4 class="border-bottom">News &amp; Events</h4>
+                        <article>
+                            <h6><a href="link/to/article">News Title or Event Name</a></h6>
+                            <p>A brief snippet about the article or event.</p>
+                            <footer>
+                                <p><a href="link/to/article" class="to-more">Read More</a></p>
+                            </footer>
+                        </article>
+                        <article>
+                            <h6><a href="link/to/article">News Title or Event Name</a></h6>
+                            <p>A brief snippet about the article or event.</p>
+                            <footer>
+                                <p><a href="link/to/article" class="to-more">Read More</a></p>
+                            </footer>
+                        </article>
+                        <footer>
+                            <p><a href="link/to/articles" class="to-more">See All</a></p>
+                        </footer>
+                    </section>
+
+                    <nav class='link set'>
+                        <h4 class="border-bottom">Link Set Title</h4>
+                        <ul>
+                            <li><a href='path/to/link'>A first link</a></li>
+                            <li><a href='path/to/link'>Another link</small></a></li>
+                            <li><a href='path/to/link'>A third link</a></li>
+                        </ul>
+                        <footer>
+                            <p><a href="path/to/link/listing" class="to-more">See All</a></p>
+                        </footer>
+                    </nav>
+
+                    <address class="microdata" itemscope itemtype='http://schema.org/ContactPoint'>
+                        <h4 class="border-bottom">Contact Us</h4>
+                        <p>
+                            <span itemprop="telephone" class="labeled">(000) 000-0000</span>
+                            <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
+                            <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
+                        </p>
+                        <p itemscope itemtype="schema.org/PostalAddress" class="labeled">
+                            <span class="fn org" itemprop='name'>Department Name</span>
+                            <br><span class="adr">
+                                <span itemprop='postOfficeBoxNumber'>Box 000000</span>
+                                <br>
+                                <span itemprop='addressLocality'>Los Angeles</span>
+                                <span itemprop='addressRegion'>CA</span>
+                                <span itemprop='postalCode'>90095-1785</span>
+                            </span>
+                        </p>
+                    </address>
+
+                </div>
+
             </div>
-            
         </div>
     </div>
     
