@@ -42,11 +42,7 @@
                 width: 100%;
                 background-color: #aaa;
             }
-            div[data-element="body"].site > header {
-                padding-left: 1em;
-                padding-right: 1em;
-            }
-            div[data-element="body"].site > .container {
+            div[data-element="body"].site > * > .container {
                 margin-left: 1em;
                 margin-right: 1em;
                 width: auto;
@@ -236,24 +232,26 @@
                         </footer>
                     </nav>
 
-                    <address class="microdata" itemscope itemtype='http://schema.org/ContactPoint'>
+                    <aside>
                         <h4 class="border-bottom">Contact Us</h4>
-                        <p>
-                            <span itemprop="telephone" class="labeled">(000) 000-0000</span>
-                            <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
-                            <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
-                        </p>
-                        <p itemscope itemtype="schema.org/PostalAddress" class="labeled">
-                            <span class="fn org" itemprop='name'>Department Name</span>
-                            <br><span class="adr">
-                                <span itemprop='postOfficeBoxNumber'>Box 000000</span>
-                                <br>
-                                <span itemprop='addressLocality'>Los Angeles</span>
-                                <span itemprop='addressRegion'>CA</span>
-                                <span itemprop='postalCode'>90095-1785</span>
-                            </span>
-                        </p>
-                    </address>
+                        <address class="microdata" itemscope itemtype="schema.org/PostalAddress">
+                            <p>
+                                <span itemprop="telephone" class="labeled">(000) 000-0000</span>
+                                <br><span itemprop="faxnumber" class="labeled">(000) 000-0000</span>
+                                <br><span itemprop="email" class="labeled">name@department.ucla.edu</span>
+                            </p>
+                            <p>
+                                <span class="fn org" itemprop='name'>Department Name</span>
+                                <br><span class="adr">
+                                    <span itemprop='postOfficeBoxNumber'>Box 000000</span>
+                                    <br>
+                                    <span itemprop='addressLocality'>Los Angeles</span>
+                                    <span itemprop='addressRegion'>CA</span>
+                                    <span itemprop='postalCode'>90095-1785</span>
+                                </span>
+                            </p>
+                        </address>
+                    </aside>
 
                 </div>
 
@@ -261,8 +259,32 @@
         </div>
     </div>
     
-    <footer class='site'>
+    <footer  class="site primary gradient" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="container">
+            
+            <ul class="list horizontal border-bottom border-tertiary" itemprop="publisher">
+                <li itemprop="name">Department Name</li>
+                <li itemprop="email">name@department.ucla.edu</li>
+                <li itemprop="telephone">(000) 000-0000</li>
+            </ul>
 
+            <nav class="list horizontal text-small">
+                <ul>
+                    <li><a href="#">Campus Directory</a></li>
+                    <li><a href="#" itemprop="sourceOrganization">University of California</a></li>
+                    <li><a href="#">Terms of Use &amp; Privacy Policy</a></li>
+                    <li>
+                        <small class="text-normal">
+                            &copy <span itemprop="copyrightYear">2013</span>
+                            <span itemprop="copyrightHolder">
+                                <span itemprop="name">UC Regents</span>
+                            </span>
+                        </small>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
     </footer>
     
 </div>               

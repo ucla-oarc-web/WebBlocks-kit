@@ -122,6 +122,13 @@ form.form:not(.form-required-failure) .form-required-fail { display: none; }
 /* line 9, ../../../../extension/blocks/form/_sizes.scss */
 form.form label, form.form button, form.form select, form.form textarea, form.form input .uneditable-input { font-size: 1em !important; }
 
+/* line 6, ../../../../extension/blocks/list/_horizontal.scss */
+ul.list.horizontal > li, nav.list.horizontal > ul > li { float: left; }
+/* line 10, ../../../../extension/blocks/list/_horizontal.scss */
+ul.list.horizontal > li:not(:first-child), nav.list.horizontal > ul > li:not(:first-child) { padding-left: 30px; }
+/* line 12, ../../../../extension/blocks/list/_horizontal.scss */
+ul.list.horizontal > li:not(:first-child):before, nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -18px; }
+
 /* line 2, ../../../../extension/blocks/message/_border-radius.scss */
 body .message { border-radius: 0px; }
 
@@ -255,14 +262,8 @@ nav.search form.form input[type="submit"] { top: 3px; z-index: 1; margin-right: 
 /* line 12, ../../../src/core/adapter/base/image-replacement/_image-replacement.scss */
 nav.search form.form input[type="submit"] br { display: none; }
 
-/* line 3, ../../../../extension/blocks/nav/list/_horizontal.scss */
-nav.list.horizontal > ul > li { float: left; }
-/* line 5, ../../../../extension/blocks/nav/list/_horizontal.scss */
+/* line 7, ../../../../extension/blocks/nav/list/_horizontal.scss */
 nav.list.horizontal > ul > li > a { padding: 0; }
-/* line 8, ../../../../extension/blocks/nav/list/_horizontal.scss */
-nav.list.horizontal > ul > li:not(:first-child) { padding-left: 20px; }
-/* line 10, ../../../../extension/blocks/nav/list/_horizontal.scss */
-nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -10px; }
 
 /* line 5, ../../../../extension/blocks/nav/tabs.scss */
 nav.tabs { border-bottom: 1px solid; border-color: transparent transparent #b3b3b3 transparent; margin-bottom: 20px; }
@@ -416,6 +417,9 @@ h6 .text-small, h6 .article.set footer, .article.set h6 footer, h6 .link.set foo
 .text-small, .article.set footer, .link.set footer { font-size: 0.85em; }
 
 /* line 29, ../../../../extension/ucla/utility/_text.scss */
+.text-normal { font-size: 1em; }
+
+/* line 33, ../../../../extension/ucla/utility/_text.scss */
 .text-upper, .page-title { text-transform: uppercase; }
 
 /* line 1, ../../../../extension/ucla/utility/_to-more.scss */
@@ -635,7 +639,7 @@ h6 .text-small, h6 .article.set footer, .article.set h6 footer, h6 .link.set foo
 .float-clear { clear: both; }
 
 /* line 14, ../../../src/core/adapter/base/block/_float.scss */
-.float-container:not(.clearfix), nav.list.horizontal:not(.clearfix), .cluster:not(.clearfix) { overflow: hidden; }
+.float-container:not(.clearfix), ul.list.horizontal:not(.clearfix), nav.list.horizontal > ul:not(.clearfix), .cluster:not(.clearfix) { overflow: hidden; }
 
 /* line 17, ../../../src/core/definitions/base/block/_float.scss */
 .clearfix, .row, nav.bar { *zoom: 1; }
@@ -1582,7 +1586,7 @@ ul.list { margin-left: 1.5em; padding-left: 0.5em; }
 ul.list ul, ul.list ol { margin-bottom: 0; }
 
 /* line 5, ../../../src/core/definitions/entity/_list.scss */
-ul.unstyled, nav.list ul, ul.list.unstyled, .link.set > ul, nav.list ul.list { margin-left: 0; padding-left: 0; list-style: none; }
+ul.unstyled, nav.list ul, ul.list.unstyled, ul.list.horizontal, nav.list.horizontal > ul, .link.set > ul, nav.list ul.list { margin-left: 0; padding-left: 0; list-style: none; }
 
 /* line 9, ../../../src/core/definitions/entity/_list.scss */
 ol.list { margin-left: 1.5em; padding-left: 0.5em; }
@@ -2445,6 +2449,11 @@ header.site a:hover { text-decoration: underline; }
   header.site nav.search + nav.mega:before { content: ""; height: 26px; width: 100%; display: block; }
   /* line 69, ../../../../sass/includes/site/_header.scss */
   header.site hgroup + nav.search + nav.mega:before { content: ""; height: 4px; } }
+
+/* line 1, ../../../../sass/includes/site/_footer.scss */
+footer.site { margin-top: 2em; padding: 8px 0; }
+/* line 6, ../../../../sass/includes/site/_footer.scss */
+footer.site > * { margin-top: 16px; margin-bottom: 16px; padding-top: 0; padding-bottom: 0; }
 
 /* line 1, ../../../../sass/includes/site/_main.scss */
 main.site { padding: 20px; margin-top: -1em; }
