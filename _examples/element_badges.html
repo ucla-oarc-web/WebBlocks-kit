@@ -81,6 +81,23 @@
         
         <script type="text/javascript">
             
+            var colorsDescriptions = {
+                'success': 'A badge with a positive connotation.',
+                'warning': 'A badge with a potentially negative information.',
+                'danger': 'A badge with information implied as dangerous.',
+                'error': 'A badge indicating an error state.',
+                    'info': 'An informational badge.',
+                'highlight': 'A notice the user should regard.',
+                'important': 'Information the user must see.',
+                'required': 'A requirement the user must fulfill.',
+                'primary': 'The primary branding color of the site, rarely used for badges.',
+                'secondary': 'The secondary branding color of the site, rarely used for badges.',
+                'tertiary': 'A tertiary branding color for the site, usually used for tangentially-related content.',
+                'neutral': 'A neutral branding tone, used for a badges with a neutral connotation.',
+                'default': 'The default color for a badge.',
+                'inverse': 'An inverse of the default color for a badge.'
+            }
+            
             $(document).ready(function(){
                 $('#example-badge .badge').each(function(){
                     makeFormattedSection(this);
@@ -88,7 +105,7 @@
                 
                 var $text = $('#i-text'), $color = $('#i-color'), $variant = $('#i-variant');
                 
-                $.each(WebBlocks.Blocks.Color.COLORS, function(){ $color.append('<option>'+this+'</option>') });
+                $.each(colorsDescriptions, function(k,v){ $color.append('<option>'+k+'</option>') })
                 
                 $text.change(function(){
                     $('main.site').find('.badge').html($(this).val());
@@ -104,6 +121,12 @@
                     $('main.site').find('.badge').each(function(){
                         updateFormattedSectionCode($(this).closest('section'))
                     });
+                })
+                
+                $color.change(function(){
+                    var val = $(this).val();
+                    $(this).siblings('.description').remove();
+                    $(this).parent().append('<p class="description text-'+val+'" style="font-weight:bold">'+colorsDescriptions[val]+'</p>');
                 })
                 
                 $variant.change(function(){
