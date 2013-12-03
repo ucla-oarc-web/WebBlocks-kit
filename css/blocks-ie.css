@@ -43,6 +43,13 @@ a { color: #073198; }
 /* line 10, ../../../src/core/adapter/base/color/_body.scss */
 a:hover { color: #44557d; }
 
+/* line 4, ../../../src/core/adapter/entity/form/control/_required.scss */
+form.form .control[data-required="true"]:not(.required) .required-fail, form.form .control[data-required="true"] .required-fail:not([data-required="ready"]) { display: none; }
+/* line 7, ../../../src/core/adapter/entity/form/control/_required.scss */
+form.form .control[data-required="true"].required .required-pass, form.form .control[data-required="true"] .required-pass:not([data-required="ready"]) { display: none; }
+/* line 12, ../../../src/core/adapter/entity/form/control/_required.scss */
+form.form:not(.form-required-failure) .form-required-fail { display: none; }
+
 /* line 5, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */
 .gradient.light.default, .gradient.fade.default { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFCFCFC', endColorstr='#FFF5F5F5', GradientType=0); }
 /* line 9, ../../../src/core/definitions/base/color/branding/_background_light_gradient-ie.scss */

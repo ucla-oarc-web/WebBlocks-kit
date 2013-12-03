@@ -68,6 +68,13 @@ a { color: #073198; }
 /* line 10, ../../../src/core/adapter/base/color/_body.scss */
 a:hover { color: #44557d; }
 
+/* line 4, ../../../src/core/adapter/entity/form/control/_required.scss */
+form.form .control[data-required="true"]:not(.required) .required-fail, form.form .control[data-required="true"] .required-fail:not([data-required="ready"]) { display: none; }
+/* line 7, ../../../src/core/adapter/entity/form/control/_required.scss */
+form.form .control[data-required="true"].required .required-pass, form.form .control[data-required="true"] .required-pass:not([data-required="ready"]) { display: none; }
+/* line 12, ../../../src/core/adapter/entity/form/control/_required.scss */
+form.form:not(.form-required-failure) .form-required-fail { display: none; }
+
 /* line 1, ../../../../extension/blocks/_button.scss */
 a.button { text-decoration: none; }
 
@@ -128,73 +135,6 @@ ul.list.horizontal > li, nav.list.horizontal > ul > li { float: left; }
 ul.list.horizontal > li:not(:first-child), nav.list.horizontal > ul > li:not(:first-child) { padding-left: 30px; }
 /* line 12, ../../../../extension/blocks/list/_horizontal.scss */
 ul.list.horizontal > li:not(:first-child):before, nav.list.horizontal > ul > li:not(:first-child):before { content: "|"; float: left; margin-left: -18px; }
-
-/* line 2, ../../../../extension/blocks/message/_border-radius.scss */
-body .message { border-radius: 0px; }
-
-/* line 2, ../../../../extension/blocks/message/_header.scss */
-body .message { border-radius: 0px; }
-
-/* line 9, ../../../../extension/blocks/message/_header.scss */
-.message.primary.light header, .message.primary header { background-color: #b8dcff; border-color: #66b3ff; }
-/* line 13, ../../../../extension/blocks/message/_header.scss */
-.message.primary.dark header, .message.emphasize.primary header { background-color: #002447; border-color: #005ab3; }
-/* line 20, ../../../../extension/blocks/message/_header.scss */
-.message.secondary.light header, .message.secondary header { background-color: #cedee8; border-color: #96b8cf; }
-/* line 24, ../../../../extension/blocks/message/_header.scss */
-.message.secondary.dark header, .message.emphasize.secondary header { background-color: #172631; border-color: #385f7a; }
-/* line 31, ../../../../extension/blocks/message/_header.scss */
-.message.tertiary.light header, .message.tertiary header { background-color: #fff9b8; border-color: #fff166; }
-/* line 35, ../../../../extension/blocks/message/_header.scss */
-.message.tertiary.dark header, .message.emphasize.tertiary header { background-color: #474100; border-color: #b3a200; }
-/* line 42, ../../../../extension/blocks/message/_header.scss */
-.message.neutral.light header, .message.neutral header { background-color: #dbdbdb; border-color: #b3b3b3; }
-/* line 46, ../../../../extension/blocks/message/_header.scss */
-.message.neutral.dark header, .message.emphasize.neutral header { background-color: #242424; border-color: #595959; }
-/* line 53, ../../../../extension/blocks/message/_header.scss */
-.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required).light header, .message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required) header { background-color: #e3e3e3; border-color: #b3b3b3; }
-/* line 57, ../../../../extension/blocks/message/_header.scss */
-.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required).dark header { background-color: #242424; border-color: #595959; }
-/* line 64, ../../../../extension/blocks/message/_header.scss */
-.message.info.light header, .message.info header { background-color: #b8ebff; border-color: #66d4ff; }
-/* line 68, ../../../../extension/blocks/message/_header.scss */
-.message.info.dark header, .message.emphasize.info header { background-color: #003347; border-color: #0081b3; }
-/* line 75, ../../../../extension/blocks/message/_header.scss */
-.message.success.light header, .message.success header { background-color: #b8ffdd; border-color: #66ffb7; }
-/* line 79, ../../../../extension/blocks/message/_header.scss */
-.message.success.dark header, .message.emphasize.success header { background-color: #004726; border-color: #00b35e; }
-/* line 86, ../../../../extension/blocks/message/_header.scss */
-.message.warning.light header, .message.warning header { background-color: #fff9b8; border-color: #fff166; }
-/* line 90, ../../../../extension/blocks/message/_header.scss */
-.message.warning.dark header, .message.emphasize.warning header { background-color: #474100; border-color: #b3a200; }
-/* line 97, ../../../../extension/blocks/message/_header.scss */
-.message.error.light header, .message.error header { background-color: #efc7c7; border-color: #dd8888; }
-/* line 101, ../../../../extension/blocks/message/_header.scss */
-.message.error.dark header, .message.emphasize.error header { background-color: #381010; border-color: #8b2727; }
-/* line 108, ../../../../extension/blocks/message/_header.scss */
-.message.danger.light header, .message.danger header { background-color: #efc7c7; border-color: #dd8888; }
-/* line 112, ../../../../extension/blocks/message/_header.scss */
-.message.danger.dark header, .message.emphasize.danger header { background-color: #381010; border-color: #8b2727; }
-/* line 119, ../../../../extension/blocks/message/_header.scss */
-.message.important.light header, .message.important header { background-color: #ffb8e6; border-color: #ff66c9; }
-/* line 123, ../../../../extension/blocks/message/_header.scss */
-.message.important.dark header, .message.emphasize.important header { background-color: #47002e; border-color: #b30073; }
-/* line 130, ../../../../extension/blocks/message/_header.scss */
-.message.highlight.light header, .message.highlight header { background-color: #ffb8e6; border-color: #ff66c9; }
-/* line 134, ../../../../extension/blocks/message/_header.scss */
-.message.highlight.dark header, .message.emphasize.highlight header { background-color: #47002e; border-color: #b30073; }
-/* line 141, ../../../../extension/blocks/message/_header.scss */
-.message.required.light header, .message.required header { background-color: #efc7c7; border-color: #dd8888; }
-/* line 145, ../../../../extension/blocks/message/_header.scss */
-.message.required.dark header, .message.emphasize.required header { background-color: #381010; border-color: #8b2727; }
-/* line 152, ../../../../extension/blocks/message/_header.scss */
-.message.inverse.light header, .message.inverse header { background-color: gray; border-color: #333333; }
-/* line 156, ../../../../extension/blocks/message/_header.scss */
-.message.inverse.dark header, .message.emphasize.inverse header { background-color: #242424; border-color: #595959; }
-/* line 162, ../../../../extension/blocks/message/_header.scss */
-.message header { margin: -5px -10px 5px -10px; padding: 5px 10px; border-bottom: 1px solid; }
-/* line 167, ../../../../extension/blocks/message/_header.scss */
-.message header h1, .message header h2, .message header h3, .message header h4, .message header h5, .message header h6 { font-size: 1.1em; margin-bottom: 0; }
 
 /* line 1, ../../../../extension/blocks/nav/_mega.scss */
 nav.mega { clear: both; }
@@ -277,35 +217,6 @@ nav.tabs > h1, nav.tabs > h2, nav.tabs > h3, nav.tabs > h4, nav.tabs > h5, nav.t
 nav.tabs > ul { list-style-type: none; margin: 0; padding: 0; }
 /* line 30, ../../../../extension/blocks/nav/tabs.scss */
 nav.tabs > ul > li > a { padding: 6px 16px; border: 1px solid; -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; -ms-border-radius: 4px 4px 0 0; -o-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; border-color: #b3b3b3; }
-
-/* line 32, ../../../../extension/blocks/structure/_cluster.scss */
-.cluster.margin-bottom { margin-bottom: 0; }
-/* line 34, ../../../../extension/blocks/structure/_cluster.scss */
-.cluster.margin-bottom > * { margin-bottom: 0.5em; }
-@media (min-width: 481px) { /* line 45, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > * { display: block; float: left; min-height: 1px; box-sizing: border-box; }
-  /* line 15, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:not(:first-child) { margin-left: 2.5641%; }
-  /* line 58, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(2), .cluster > *:first-child:nth-last-child(2) ~ *, .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 48.71795%; } }
-@media (min-width: 481px) and (max-width: 640px) { /* line 67, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(3), .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(2n+1) { margin-left: 0; }
-  /* line 72, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(3) ~ *:last-child, .cluster > *:first-child:nth-last-child(5) ~ *:last-child { margin-left: 26.92308%; } }
-@media (min-width: 641px) { /* line 85, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 31.62393%; } }
-@media (min-width: 481px) and (max-width: 768px) { /* line 93, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(4) ~ *:nth-child(3) { margin-left: 0; } }
-@media (min-width: 769px) { /* line 102, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ * { width: 23.07693%; } }
-@media (min-width: 641px) and (max-width: 960px) { /* line 110, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(4) { margin-left: 18.37607%; }
-  /* line 114, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(4) { margin-left: 0; } }
-@media (min-width: 960px) { /* line 123, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ * { width: 17.94872%; }
-  /* line 128, ../../../../extension/blocks/structure/_cluster.scss */
-  .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
 
 /* line 4, ../../../../extension/ucla/microdata/_microdata.scss */
 .microdata [itemprop="addressLocality"]:not(:last-child):after { content: ', '; }
@@ -913,6 +824,35 @@ table { border-collapse: collapse; border-spacing: 0; }
 .ir { background-color: transparent; background-repeat: no-repeat; border: 0; direction: ltr; display: block; text-align: left; text-indent: -999em; overflow: hidden; *line-height: 0; }
 /* line 12, ../../../src/core/adapter/base/image-replacement/_image-replacement.scss */
 .ir br { display: none; }
+
+/* line 28, ../../../src/core/adapter/base/structure/_cluster.scss */
+.cluster.margin-bottom { margin-bottom: 0; }
+/* line 30, ../../../src/core/adapter/base/structure/_cluster.scss */
+.cluster.margin-bottom > * { margin-bottom: 0.5em; }
+@media (min-width: 481px) { /* line 41, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > * { display: block; float: left; min-height: 1px; box-sizing: border-box; }
+  /* line 11, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:not(:first-child) { margin-left: 2.5641%; }
+  /* line 54, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(2), .cluster > *:first-child:nth-last-child(2) ~ *, .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 48.71795%; } }
+@media (min-width: 481px) and (max-width: 640px) { /* line 65, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(5) ~ *:nth-child(3), .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(2n+1), .cluster.left > *:first-child:nth-last-child(3) ~ *:last-child, .cluster.left > *:first-child:nth-last-child(5) ~ *:last-child { margin-left: 0; }
+  /* line 70, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster:not(.left) > *:first-child:nth-last-child(3) ~ *:last-child, .cluster:not(.left) > *:first-child:nth-last-child(5) ~ *:last-child { margin-left: 26.92308%; } }
+@media (min-width: 641px) { /* line 83, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(3), .cluster > *:first-child:nth-last-child(3) ~ *, .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ *, .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 31.62393%; } }
+@media (min-width: 481px) and (max-width: 768px) { /* line 91, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(4) ~ *:nth-child(3) { margin-left: 0; } }
+@media (min-width: 769px) { /* line 100, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(4), .cluster > *:first-child:nth-last-child(4) ~ * { width: 23.07693%; } }
+@media (min-width: 641px) and (max-width: 960px) { /* line 108, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster:not(.left) > *:first-child:nth-last-child(5) ~ *:nth-child(4) { margin-left: 18.37607%; }
+  /* line 113, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster.left > *:first-child:nth-last-child(5) ~ *:nth-child(4), .cluster > *:first-child:nth-last-child(6) ~ *:nth-child(4) { margin-left: 0; } }
+@media (min-width: 960px) { /* line 122, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(5), .cluster > *:first-child:nth-last-child(5) ~ * { width: 17.94872%; }
+  /* line 127, ../../../src/core/adapter/base/structure/_cluster.scss */
+  .cluster > *:first-child:nth-last-child(6), .cluster > *:first-child:nth-last-child(6) ~ * { width: 14.52992%; } }
 
 /* line 1, ../../../src/core/definitions/base/structure/_constrained.scss */
 .constrained, figure.billboard img, .cluster img { max-width: 100%; }
@@ -1535,7 +1475,7 @@ blockquote { margin: 0 0 0 0.3em; padding: 0 0 0 15px; border-left: 5px solid #e
 /* line 7, ../../../src/core/adapter/entity/_form.scss */
 form.form label, form.form legend { font-weight: bold; display: block; }
 /* line 12, ../../../src/core/adapter/entity/_form.scss */
-form.form legend { width: 100%; padding: 0; margin-bottom: 20px; font-size: 1.275em; line-height: 40px; color: #2f2f2f; border: 0; border-bottom: 1px solid #fcfcfc; }
+form.form legend { width: 100%; padding: 0; margin-bottom: 20px; font-size: 1.5em; line-height: 40px; color: #2f2f2f; border: 0; border-bottom: 1px solid #fcfcfc; }
 /* line 23, ../../../src/core/adapter/entity/_form.scss */
 form.form legend small, form.form legend .blockquote > cite, form.form legend .blockquote > figcaption { color: #666666; }
 /* line 29, ../../../src/core/adapter/entity/_form.scss */
@@ -1543,13 +1483,13 @@ form.form legend + div.control { padding-top: 20px; }
 /* line 33, ../../../src/core/adapter/entity/_form.scss */
 form.form fieldset { padding: 0; margin: 0; border: 0; }
 /* line 43, ../../../src/core/adapter/entity/_form.scss */
-form.form label, form.form input, form.form button, form.form select, form.form textarea { font-size: 0.85em; line-height: 1.4; }
+form.form label, form.form input, form.form button, form.form select, form.form textarea { font-size: 1em; line-height: 1.4; }
 /* line 51, ../../../src/core/adapter/entity/_form.scss */
 form.form input, form.form button, form.form select, form.form textarea { font-weight: normal; font-family: "Proxima Nova", "OpenSans", sans-serif; }
 /* line 56, ../../../src/core/adapter/entity/_form.scss */
 form.form label { margin: 0 0 10px; }
 /* line 76, ../../../src/core/adapter/entity/_form.scss */
-form.form select, form.form textarea, form.form input[type="text"], form.form input[type="password"], form.form input[type="datetime"], form.form input[type="datetime-local"], form.form input[type="date"], form.form input[type="month"], form.form input[type="time"], form.form input[type="week"], form.form input[type="number"], form.form input[type="email"], form.form input[type="url"], form.form input[type="search"], form.form input[type="tel"], form.form input[type="color"], form.form .uneditable-input { display: inline-block; height: 1.4; padding: 4px 6px; margin-bottom: 10px; font-size: 0.85em; line-height: 1.4; color: #2f2f2f; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+form.form select, form.form textarea, form.form input[type="text"], form.form input[type="password"], form.form input[type="datetime"], form.form input[type="datetime-local"], form.form input[type="date"], form.form input[type="month"], form.form input[type="time"], form.form input[type="week"], form.form input[type="number"], form.form input[type="email"], form.form input[type="url"], form.form input[type="search"], form.form input[type="tel"], form.form input[type="color"], form.form .uneditable-input { display: inline-block; height: 1.4; padding: 4px 6px; margin-bottom: 10px; font-size: 1em; line-height: 1.4; color: #2f2f2f; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 /* line 89, ../../../src/core/adapter/entity/_form.scss */
 form.form input, form.form textarea, form.form .uneditable-input { width: 210px; }
 /* line 93, ../../../src/core/adapter/entity/_form.scss */
@@ -1618,9 +1558,11 @@ ul.outline > li > ol > li > ol, ul.outline > li > ol > li > ul, ul.outline > li 
 ul.outline > li > ol > li > ol > li > ol, ul.outline > li > ol > li > ol > li > ul, ul.outline > li > ol > li > ul > li > ol, ul.outline > li > ol > li > ul > li > ul, ul.outline > li > ul > li > ol > li > ol, ul.outline > li > ul > li > ol > li > ul, ul.outline > li > ul > li > ul > li > ol, ul.outline > li > ul > li > ul > li > ul, ol.outline > li > ol > li > ol > li > ol, ol.outline > li > ol > li > ol > li > ul, ol.outline > li > ol > li > ul > li > ol, ol.outline > li > ol > li > ul > li > ul, ol.outline > li > ul > li > ol > li > ol, ol.outline > li > ul > li > ol > li > ul, ol.outline > li > ul > li > ul > li > ol, ol.outline > li > ul > li > ul > li > ul { list-style-type: lower-alpha; }
 
 /* line 1, ../../../src/core/definitions/entity/_message.scss */
-.message { padding: 5px 10px; border-radius: 5px; border-width: 1px; border-style: solid; margin-bottom: 0.5em; }
+.message { padding: 8px 12px; border-radius: 5px; border-width: 1px; border-style: solid; margin-bottom: 0.5em; }
 /* line 5, ../../../src/core/adapter/entity/_message.scss */
 .message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.important):not(.inverse):not(.required):not(.highlight) { color: #2f2f2f; background-color: whitesmoke; border-color: #b3b3b3; text-shadow: none; }
+/* line 21, ../../../src/core/adapter/entity/_message.scss */
+.message > *:last-child { margin-bottom: 0; }
 
 /* line 1, ../../../src/core/definitions/entity/_table.scss */
 .table { max-width: 100%; border-collapse: collapse; border-spacing: 0; width: 100%; margin-bottom: 1.4; border-bottom: 1px solid #b3b3b3; }
@@ -2324,6 +2266,69 @@ form.form div.control.required, form.form li.control.required { color: #8b2727; 
 form.form div.control.required label, form.form li.control.required label { color: #8b2727; }
 /* line 93, ../../../src/core/adapter/entity/form/control/_mood.scss */
 form.form div.control.required input, form.form div.control.required select, form.form div.control.required textarea, form.form li.control.required input, form.form li.control.required select, form.form li.control.required textarea { border-color: #8b2727; }
+
+/* line 5, ../../../src/core/adapter/entity/message/_header.scss */
+.message.primary.light header, .message.primary header { background-color: #add7ff; border-color: #66b3ff; }
+/* line 9, ../../../src/core/adapter/entity/message/_header.scss */
+.message.primary.dark header, .message.emphasize.primary header { background-color: #002447; border-color: #005ab3; }
+/* line 16, ../../../src/core/adapter/entity/message/_header.scss */
+.message.secondary.light header, .message.secondary header { background-color: #c7d9e5; border-color: #96b8cf; }
+/* line 20, ../../../src/core/adapter/entity/message/_header.scss */
+.message.secondary.dark header, .message.emphasize.secondary header { background-color: #172631; border-color: #385f7a; }
+/* line 27, ../../../src/core/adapter/entity/message/_header.scss */
+.message.tertiary.light header, .message.tertiary header { background-color: #fff8ad; border-color: #fff166; }
+/* line 31, ../../../src/core/adapter/entity/message/_header.scss */
+.message.tertiary.dark header, .message.emphasize.tertiary header { background-color: #474100; border-color: #b3a200; }
+/* line 38, ../../../src/core/adapter/entity/message/_header.scss */
+.message.neutral.light header, .message.neutral header { background-color: #d6d6d6; border-color: #b3b3b3; }
+/* line 42, ../../../src/core/adapter/entity/message/_header.scss */
+.message.neutral.dark header, .message.emphasize.neutral header { background-color: #242424; border-color: #595959; }
+/* line 49, ../../../src/core/adapter/entity/message/_header.scss */
+.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required).light header, .message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required) header { background-color: #dedede; border-color: #b3b3b3; }
+/* line 53, ../../../src/core/adapter/entity/message/_header.scss */
+.message:not(.primary):not(.secondary):not(.tertiary):not(.neutral):not(.info):not(.success):not(.warning):not(.error):not(.danger):not(.highlight):not(.important):not(.inverse):not(.required).dark header { background-color: #242424; border-color: #595959; }
+/* line 60, ../../../src/core/adapter/entity/message/_header.scss */
+.message.info.light header, .message.info header { background-color: #ade8ff; border-color: #66d4ff; }
+/* line 64, ../../../src/core/adapter/entity/message/_header.scss */
+.message.info.dark header, .message.emphasize.info header { background-color: #003347; border-color: #0081b3; }
+/* line 71, ../../../src/core/adapter/entity/message/_header.scss */
+.message.success.light header, .message.success header { background-color: #adffd9; border-color: #66ffb7; }
+/* line 75, ../../../src/core/adapter/entity/message/_header.scss */
+.message.success.dark header, .message.emphasize.success header { background-color: #004726; border-color: #00b35e; }
+/* line 82, ../../../src/core/adapter/entity/message/_header.scss */
+.message.warning.light header, .message.warning header { background-color: #fff8ad; border-color: #fff166; }
+/* line 86, ../../../src/core/adapter/entity/message/_header.scss */
+.message.warning.dark header, .message.emphasize.warning header { background-color: #474100; border-color: #b3a200; }
+/* line 93, ../../../src/core/adapter/entity/message/_header.scss */
+.message.error.light header, .message.error header { background-color: #edbfbf; border-color: #dd8888; }
+/* line 97, ../../../src/core/adapter/entity/message/_header.scss */
+.message.error.dark header, .message.emphasize.error header { background-color: #381010; border-color: #8b2727; }
+/* line 104, ../../../src/core/adapter/entity/message/_header.scss */
+.message.danger.light header, .message.danger header { background-color: #edbfbf; border-color: #dd8888; }
+/* line 108, ../../../src/core/adapter/entity/message/_header.scss */
+.message.danger.dark header, .message.emphasize.danger header { background-color: #381010; border-color: #8b2727; }
+/* line 115, ../../../src/core/adapter/entity/message/_header.scss */
+.message.important.light header, .message.important header { background-color: #ffade2; border-color: #ff66c9; }
+/* line 119, ../../../src/core/adapter/entity/message/_header.scss */
+.message.important.dark header, .message.emphasize.important header { background-color: #47002e; border-color: #b30073; }
+/* line 126, ../../../src/core/adapter/entity/message/_header.scss */
+.message.highlight.light header, .message.highlight header { background-color: #ffade2; border-color: #ff66c9; }
+/* line 130, ../../../src/core/adapter/entity/message/_header.scss */
+.message.highlight.dark header, .message.emphasize.highlight header { background-color: #47002e; border-color: #b30073; }
+/* line 137, ../../../src/core/adapter/entity/message/_header.scss */
+.message.required.light header, .message.required header { background-color: #edbfbf; border-color: #dd8888; }
+/* line 141, ../../../src/core/adapter/entity/message/_header.scss */
+.message.required.dark header, .message.emphasize.required header { background-color: #381010; border-color: #8b2727; }
+/* line 148, ../../../src/core/adapter/entity/message/_header.scss */
+.message.inverse.light header, .message.inverse header { background-color: #858585; border-color: #333333; }
+/* line 152, ../../../src/core/adapter/entity/message/_header.scss */
+.message.inverse.dark header, .message.emphasize.inverse header { background-color: #242424; border-color: #595959; }
+/* line 5, ../../../src/core/definitions/entity/message/_header.scss */
+.message header { margin: -8px -12px 8px -12px; padding: 8px 12px; border-bottom: 1px solid; }
+/* line 166, ../../../src/core/adapter/entity/message/_header.scss */
+.message header + *:before { content: ''; height: 8px; display: block; }
+/* line 177, ../../../src/core/adapter/entity/message/_header.scss */
+.message header, .message header h1, .message header h2, .message header h3, .message header h4, .message header h5, .message header h6 { font-size: 1.0em; margin-bottom: 0; }
 
 /* line 1, ../../../src/core/definitions/entity/nav/_bar.scss */
 nav.bar { *position: relative; *z-index: 2; margin-bottom: 1.4em; min-height: 40px; padding-left: 20px; padding-right: 20px; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065); -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065); }

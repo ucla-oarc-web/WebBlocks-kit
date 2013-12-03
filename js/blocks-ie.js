@@ -353,18 +353,21 @@ References:
 
 (function(win) {
 
-	// If browser isn't IE, then stop execution! This handles the script 
-	// being loaded by non IE browsers because the developer didn't use 
-	// conditional comments.
-	if (/*@cc_on!@*/true) return;
+	// Determine IE version and stop execution if browser isn't IE. This
+	// handles the script being loaded by non IE browsers because the
+	// developer didn't use conditional comments.
+	var ieUserAgent = navigator.userAgent.match(/MSIE (\d+)/);
+	if (!ieUserAgent) {
+		return false;
+	}
 
 	// =========================== Init Objects ============================
 
 	var doc = document;
 	var root = doc.documentElement;
 	var xhr = getXHRObject();
-	var ieVersion = /MSIE (\d+)/.exec(navigator.userAgent)[1];
-	
+	var ieVersion = ieUserAgent[1];
+
 	// If were not in standards mode, IE is too old / new or we can't create
 	// an XMLHttpRequest object then we should get out now.
 	if (doc.compatMode != 'CSS1Compat' || ieVersion<6 || ieVersion>8 || !xhr) {
@@ -886,9 +889,6 @@ References:
 	};
 })(this);
 ;
-if(typeof Blocks == 'undefined')
-    var Blocks = {};
-
 Blocks.IE = {};
 Blocks.IE.css = {};
 Blocks.IE.css.filter = {};
